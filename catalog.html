@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="scss/catalog/catalog.css">
+</head>
+<body>
+
+<div id="adaptive">
+    <nav class="navbar">
+        <div class="navbar__wrapper">
+            <div class="navbar__lhand">
+                <a href="index.html" class="navbar__logo">
+                    spraga's logo
+                    <img src="images/navLogo.svg" alt="spraga's logo - go to homepage" class="navbar__logo_img">
+                    <img src="images/navTabletLogo.svg" alt="spraga's logo - go to homepage" class="tablet navbar__logo_img">
+                    <img src="images/navMobileLogo.svg" alt="spraga's logo - go to homepage" class="mobile navbar__logo_img">
+                </a>
+                <h1 class="navbar__title">Fermented by living culture</h1>
+            </div>
+            <div class="navbar__rhand">
+                <ul class="navbar__menu">
+                    <li><a href="catalog.html" class="navbar__menu_link">Shop</a></li>
+                    <li><a href="" class="navbar__menu_link">Where to buy</a></li>
+                    <li><a href="blog.html" class="navbar__menu_link">Blog</a></li>
+                    <li><a href="about.html" class="navbar__menu_link">About spraga</a></li>
+                </ul>
+                <a href="account.html" class="navbar__account">
+                    <img src="images/userIcon.svg" alt="my account" class="navbar__account_icon">
+                    <img src="images/user-circle.svg" alt="my account" class="navbar__account_icon hover">
+                </a>
+                <button type="button" class="navbar__wishlist">
+                    <img src="images/wishlistIcon.svg" alt="wishlist" class="navbar__wishlist_icon">
+                    <img src="images/wishlistHover.svg" alt="wishlist" class="navbar__wishlist_icon hover">
+                    <span class="navbar__wishlist_q">0</span>
+                </button>
+                <button type="button" class="navbar__basket">
+                    <img src="images/basketIcon.svg" alt="basket" class="navbar__basket_icon">
+                    <img src="images/basketHover.svg" alt="basket" class="navbar__basket_icon hover">
+                    <span class="navbar__basket_q">0</span>
+                </button>
+                <div class="navbar__lang">
+                    <button type="button" class="navbar__lang_btn">
+                        <span class="navbar__lang_txt">CZ</span>
+                        <img src="images/smallChevronDown.svg" alt="check the language" class="navbar__lang_icon">
+                    </button>
+                    <div class="navbar__lang_choose">
+                        <button class="navbar__lang_choose_btn" type="button">CZ</button>
+                        <button class="navbar__lang_choose_btn" type="button">EN</button>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar__mobile">
+                <button type="button" class="navbar__wishlist">
+                    <img src="images/wishlistIcon.svg" alt="wishlist" class="navbar__wishlist_icon">
+                    <img src="images/wishlistHover.svg" alt="wishlist" class="navbar__wishlist_icon hover">
+                    <span class="navbar__wishlist_q">0</span>
+                </button>
+                <button type="button" class="navbar__basket">
+                    <img src="images/basketIcon.svg" alt="basket" class="navbar__basket_icon">
+                    <img src="images/basketHover.svg" alt="basket" class="navbar__basket_icon hover">
+                    <span class="navbar__basket_q">0</span>
+                </button>
+                <div class="navbar__mobile_wrapper">
+                    <button class="navbar__mobile_btn" type="button">
+                        <img src="" alt="menu" class="navbar__mobile_btn_icon">
+                    </button>
+                    <div class="navbar__mobile_container">
+                        <a href="" class="navbar__mobile_logo">
+                            spraga's logo
+                            <img src="images/navMobileLogo.svg" alt="spraga's logo - go to homepage" class="navbar__mobile_logo_img">
+                        </a>
+                        <h2 class="navbar__mobile_title">Fermented by living culture</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="products" id="catalog">
+        <h1 class="products__title">Our drinks</h1>
+        <div class="products__filter">
+            <button type="button" class="products__filter_btn" id="defaultFilter" data-activate="all">all</button>
+            <button type="button" class="products__filter_btn" data-activate="kambucha">kombucha</button>
+            <button type="button" class="products__filter_btn" data-activate="energy">energy drinks</button>
+        </div>
+        <div class="products__wrapper" id="all">
+            <div class="product">
+                <div class="product__wrapper">
+                    <div class="product__pic">
+                        <div class="product__animation">
+                            <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                        </div>
+                        <img src="images/kambucha3.png" alt="" class="product__img">
+                    </div>
+                    <img src="images/kambuchaBg3.png" alt="" class="product__bg">
+                    <div class="product__tooltip orange">
+                        <p class="product__tooltip_pr">Fresh Fusion</p>
+                    </div>
+                </div>  
+                <h3 class="product__name">Kombucha Classic</h3>
+                <div class="product__price">
+                    <del class="product__price_regular">432 CZK</del>
+                    <p class="product__price_new">432 CZK</p>
+                </div>
+                <div class="product__btns">
+                    <button type="button" class="product__btns_addWishlist">
+                        <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
+                        <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    </button>
+                    <button type="button" class="product__btns_buy">Buy</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product__wrapper">
+                    <div class="product__pic">
+                        <div class="product__animation">
+                            <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                        </div>
+                        <img src="images/kambucha3.png" alt="" class="product__img">
+                    </div>
+                    <img src="images/kambuchaBg3.png" alt="" class="product__bg">
+                    <div class="product__tooltip orange">
+                        <p class="product__tooltip_pr">Fresh Fusion</p>
+                    </div>
+                </div>  
+                <h3 class="product__name">Kombucha Classic</h3>
+                <div class="product__price">
+                    <del class="product__price_regular">432 CZK</del>
+                    <p class="product__price_new">432 CZK</p>
+                </div>
+                <div class="product__btns">
+                    <button type="button" class="product__btns_addWishlist">
+                        <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
+                        <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    </button>
+                    <button type="button" class="product__btns_buy">Buy</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product__wrapper">
+                    <div class="product__pic">
+                        <div class="product__animation">
+                            <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                        </div>
+                        <img src="images/kambucha3.png" alt="" class="product__img">
+                    </div>
+                    <img src="images/kambuchaBg3.png" alt="" class="product__bg">
+                    <div class="product__tooltip orange">
+                        <p class="product__tooltip_pr">Fresh Fusion</p>
+                    </div>
+                </div>  
+                <h3 class="product__name">Kombucha Classic</h3>
+                <div class="product__price">
+                    <del class="product__price_regular">432 CZK</del>
+                    <p class="product__price_new">432 CZK</p>
+                </div>
+                <div class="product__btns">
+                    <button type="button" class="product__btns_addWishlist">
+                        <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
+                        <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    </button>
+                    <button type="button" class="product__btns_buy">Buy</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product__wrapper">
+                    <div class="product__pic">
+                        <div class="product__animation">
+                            <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                        </div>
+                        <img src="images/kambucha3.png" alt="" class="product__img">
+                    </div>
+                    <img src="images/kambuchaBg3.png" alt="" class="product__bg">
+                    <div class="product__tooltip orange">
+                        <p class="product__tooltip_pr">Fresh Fusion</p>
+                    </div>
+                </div>  
+                <h3 class="product__name">Kombucha Classic</h3>
+                <div class="product__price">
+                    <del class="product__price_regular">432 CZK</del>
+                    <p class="product__price_new">432 CZK</p>
+                </div>
+                <div class="product__btns">
+                    <button type="button" class="product__btns_addWishlist">
+                        <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
+                        <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    </button>
+                    <button type="button" class="product__btns_buy">Buy</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product__wrapper">
+                    <div class="product__pic">
+                        <div class="product__animation">
+                            <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                        </div>
+                        <img src="images/kambucha3.png" alt="" class="product__img">
+                    </div>
+                    <img src="images/kambuchaBg3.png" alt="" class="product__bg">
+                    <div class="product__tooltip orange">
+                        <p class="product__tooltip_pr">Fresh Fusion</p>
+                    </div>
+                </div>  
+                <h3 class="product__name">Kombucha Classic</h3>
+                <div class="product__price">
+                    <del class="product__price_regular">432 CZK</del>
+                    <p class="product__price_new">432 CZK</p>
+                </div>
+                <div class="product__btns">
+                    <button type="button" class="product__btns_addWishlist">
+                        <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
+                        <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    </button>
+                    <button type="button" class="product__btns_buy">Buy</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product__wrapper">
+                    <div class="product__pic">
+                        <div class="product__animation">
+                            <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                        </div>
+                        <img src="images/kambucha3.png" alt="" class="product__img">
+                    </div>
+                    <img src="images/kambuchaBg3.png" alt="" class="product__bg">
+                    <div class="product__tooltip orange">
+                        <p class="product__tooltip_pr">Fresh Fusion</p>
+                    </div>
+                </div>  
+                <h3 class="product__name">Kombucha Classic</h3>
+                <div class="product__price">
+                    <del class="product__price_regular">432 CZK</del>
+                    <p class="product__price_new">432 CZK</p>
+                </div>
+                <div class="product__btns">
+                    <button type="button" class="product__btns_addWishlist">
+                        <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
+                        <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    </button>
+                    <button type="button" class="product__btns_buy">Buy</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product__wrapper">
+                    <div class="product__pic">
+                        <div class="product__animation">
+                            <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                        </div>
+                        <img src="images/kambucha3.png" alt="" class="product__img">
+                    </div>
+                    <img src="images/kambuchaBg3.png" alt="" class="product__bg">
+                    <div class="product__tooltip orange">
+                        <p class="product__tooltip_pr">Fresh Fusion</p>
+                    </div>
+                </div>  
+                <h3 class="product__name">Kombucha Classic</h3>
+                <div class="product__price">
+                    <del class="product__price_regular">432 CZK</del>
+                    <p class="product__price_new">432 CZK</p>
+                </div>
+                <div class="product__btns">
+                    <button type="button" class="product__btns_addWishlist">
+                        <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
+                        <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    </button>
+                    <button type="button" class="product__btns_buy">Buy</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product__wrapper">
+                    <div class="product__pic">
+                        <div class="product__animation">
+                            <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                        </div>
+                        <img src="images/kambucha3.png" alt="" class="product__img">
+                    </div>
+                    <img src="images/kambuchaBg3.png" alt="" class="product__bg">
+                    <div class="product__tooltip orange">
+                        <p class="product__tooltip_pr">Fresh Fusion</p>
+                    </div>
+                </div>  
+                <h3 class="product__name">Kombucha Classic</h3>
+                <div class="product__price">
+                    <del class="product__price_regular">432 CZK</del>
+                    <p class="product__price_new">432 CZK</p>
+                </div>
+                <div class="product__btns">
+                    <button type="button" class="product__btns_addWishlist">
+                        <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
+                        <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    </button>
+                    <button type="button" class="product__btns_buy">Buy</button>
+                </div>
+            </div>
+        </div>
+        <div class="products__wrapper" id="kambucha">
+            <div class="product">
+                <div class="product__wrapper">
+                    <div class="product__pic">
+                        <div class="product__animation">
+                            <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                        </div>
+                        <img src="images/kambucha3.png" alt="" class="product__img">
+                    </div>
+                    <img src="images/kambuchaBg3.png" alt="" class="product__bg">
+                    <div class="product__tooltip orange">
+                        <p class="product__tooltip_pr">Fresh Fusion</p>
+                    </div>
+                </div>  
+                <h3 class="product__name">Kombucha Classic</h3>
+                <div class="product__price">
+                    <del class="product__price_regular">432 CZK</del>
+                    <p class="product__price_new">432 CZK</p>
+                </div>
+                <div class="product__btns">
+                    <button type="button" class="product__btns_addWishlist">
+                        <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
+                        <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    </button>
+                    <button type="button" class="product__btns_buy">Buy</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product__wrapper">
+                    <div class="product__pic">
+                        <div class="product__animation">
+                            <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                        </div>
+                        <img src="images/kambucha3.png" alt="" class="product__img">
+                    </div>
+                    <img src="images/kambuchaBg3.png" alt="" class="product__bg">
+                    <div class="product__tooltip orange">
+                        <p class="product__tooltip_pr">Fresh Fusion</p>
+                    </div>
+                </div>  
+                <h3 class="product__name">Kombucha Classic</h3>
+                <div class="product__price">
+                    <del class="product__price_regular">432 CZK</del>
+                    <p class="product__price_new">432 CZK</p>
+                </div>
+                <div class="product__btns">
+                    <button type="button" class="product__btns_addWishlist">
+                        <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
+                        <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    </button>
+                    <button type="button" class="product__btns_buy">Buy</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product__wrapper">
+                    <div class="product__pic">
+                        <div class="product__animation">
+                            <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                        </div>
+                        <img src="images/kambucha3.png" alt="" class="product__img">
+                    </div>
+                    <img src="images/kambuchaBg3.png" alt="" class="product__bg">
+                    <div class="product__tooltip orange">
+                        <p class="product__tooltip_pr">Fresh Fusion</p>
+                    </div>
+                </div>  
+                <h3 class="product__name">Kombucha Classic</h3>
+                <div class="product__price">
+                    <del class="product__price_regular">432 CZK</del>
+                    <p class="product__price_new">432 CZK</p>
+                </div>
+                <div class="product__btns">
+                    <button type="button" class="product__btns_addWishlist">
+                        <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
+                        <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    </button>
+                    <button type="button" class="product__btns_buy">Buy</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product__wrapper">
+                    <div class="product__pic">
+                        <div class="product__animation">
+                            <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                        </div>
+                        <img src="images/kambucha3.png" alt="" class="product__img">
+                    </div>
+                    <img src="images/kambuchaBg3.png" alt="" class="product__bg">
+                    <div class="product__tooltip orange">
+                        <p class="product__tooltip_pr">Fresh Fusion</p>
+                    </div>
+                </div>  
+                <h3 class="product__name">Kombucha Classic</h3>
+                <div class="product__price">
+                    <del class="product__price_regular">432 CZK</del>
+                    <p class="product__price_new">432 CZK</p>
+                </div>
+                <div class="product__btns">
+                    <button type="button" class="product__btns_addWishlist">
+                        <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
+                        <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    </button>
+                    <button type="button" class="product__btns_buy">Buy</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product__wrapper">
+                    <div class="product__pic">
+                        <div class="product__animation">
+                            <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                        </div>
+                        <img src="images/kambucha3.png" alt="" class="product__img">
+                    </div>
+                    <img src="images/kambuchaBg3.png" alt="" class="product__bg">
+                    <div class="product__tooltip orange">
+                        <p class="product__tooltip_pr">Fresh Fusion</p>
+                    </div>
+                </div>  
+                <h3 class="product__name">Kombucha Classic</h3>
+                <div class="product__price">
+                    <del class="product__price_regular">432 CZK</del>
+                    <p class="product__price_new">432 CZK</p>
+                </div>
+                <div class="product__btns">
+                    <button type="button" class="product__btns_addWishlist">
+                        <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
+                        <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    </button>
+                    <button type="button" class="product__btns_buy">Buy</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product__wrapper">
+                    <div class="product__pic">
+                        <div class="product__animation">
+                            <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                        </div>
+                        <img src="images/kambucha3.png" alt="" class="product__img">
+                    </div>
+                    <img src="images/kambuchaBg3.png" alt="" class="product__bg">
+                    <div class="product__tooltip orange">
+                        <p class="product__tooltip_pr">Fresh Fusion</p>
+                    </div>
+                </div>  
+                <h3 class="product__name">Kombucha Classic</h3>
+                <div class="product__price">
+                    <del class="product__price_regular">432 CZK</del>
+                    <p class="product__price_new">432 CZK</p>
+                </div>
+                <div class="product__btns">
+                    <button type="button" class="product__btns_addWishlist">
+                        <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
+                        <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    </button>
+                    <button type="button" class="product__btns_buy">Buy</button>
+                </div>
+            </div>
+        </div>
+        <div class="products__wrapper" id="energy">
+            <div class="product">
+                <div class="product__wrapper">
+                    <div class="product__pic">
+                        <div class="product__animation">
+                            <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                        </div>
+                        <img src="images/kambucha3.png" alt="" class="product__img">
+                    </div>
+                    <img src="images/kambuchaBg3.png" alt="" class="product__bg">
+                    <div class="product__tooltip orange">
+                        <p class="product__tooltip_pr">Fresh Fusion</p>
+                    </div>
+                </div>  
+                <h3 class="product__name">Kombucha Classic</h3>
+                <div class="product__price">
+                    <del class="product__price_regular">432 CZK</del>
+                    <p class="product__price_new">432 CZK</p>
+                </div>
+                <div class="product__btns">
+                    <button type="button" class="product__btns_addWishlist">
+                        <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
+                        <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    </button>
+                    <button type="button" class="product__btns_buy">Buy</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product__wrapper">
+                    <div class="product__pic">
+                        <div class="product__animation">
+                            <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                        </div>
+                        <img src="images/kambucha3.png" alt="" class="product__img">
+                    </div>
+                    <img src="images/kambuchaBg3.png" alt="" class="product__bg">
+                    <div class="product__tooltip orange">
+                        <p class="product__tooltip_pr">Fresh Fusion</p>
+                    </div>
+                </div>  
+                <h3 class="product__name">Kombucha Classic</h3>
+                <div class="product__price">
+                    <del class="product__price_regular">432 CZK</del>
+                    <p class="product__price_new">432 CZK</p>
+                </div>
+                <div class="product__btns">
+                    <button type="button" class="product__btns_addWishlist">
+                        <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
+                        <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    </button>
+                    <button type="button" class="product__btns_buy">Buy</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product__wrapper">
+                    <div class="product__pic">
+                        <div class="product__animation">
+                            <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                        </div>
+                        <img src="images/kambucha3.png" alt="" class="product__img">
+                    </div>
+                    <img src="images/kambuchaBg3.png" alt="" class="product__bg">
+                    <div class="product__tooltip orange">
+                        <p class="product__tooltip_pr">Fresh Fusion</p>
+                    </div>
+                </div>  
+                <h3 class="product__name">Kombucha Classic</h3>
+                <div class="product__price">
+                    <del class="product__price_regular">432 CZK</del>
+                    <p class="product__price_new">432 CZK</p>
+                </div>
+                <div class="product__btns">
+                    <button type="button" class="product__btns_addWishlist">
+                        <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
+                        <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    </button>
+                    <button type="button" class="product__btns_buy">Buy</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product__wrapper">
+                    <div class="product__pic">
+                        <div class="product__animation">
+                            <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                        </div>
+                        <img src="images/kambucha3.png" alt="" class="product__img">
+                    </div>
+                    <img src="images/kambuchaBg3.png" alt="" class="product__bg">
+                    <div class="product__tooltip orange">
+                        <p class="product__tooltip_pr">Fresh Fusion</p>
+                    </div>
+                </div>  
+                <h3 class="product__name">Kombucha Classic</h3>
+                <div class="product__price">
+                    <del class="product__price_regular">432 CZK</del>
+                    <p class="product__price_new">432 CZK</p>
+                </div>
+                <div class="product__btns">
+                    <button type="button" class="product__btns_addWishlist">
+                        <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
+                        <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    </button>
+                    <button type="button" class="product__btns_buy">Buy</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product__wrapper">
+                    <div class="product__pic">
+                        <div class="product__animation">
+                            <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                        </div>
+                        <img src="images/kambucha3.png" alt="" class="product__img">
+                    </div>
+                    <img src="images/kambuchaBg3.png" alt="" class="product__bg">
+                    <div class="product__tooltip orange">
+                        <p class="product__tooltip_pr">Fresh Fusion</p>
+                    </div>
+                </div>  
+                <h3 class="product__name">Kombucha Classic</h3>
+                <div class="product__price">
+                    <del class="product__price_regular">432 CZK</del>
+                    <p class="product__price_new">432 CZK</p>
+                </div>
+                <div class="product__btns">
+                    <button type="button" class="product__btns_addWishlist">
+                        <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
+                        <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    </button>
+                    <button type="button" class="product__btns_buy">Buy</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <p class="footer__title">About Spraga</p>
+            <div class="footer__desc">
+                <ul class="footer__desc_list">
+                    <li class="footer__desc_list_el">Czech quality with a world-class taste</li>
+                    <li class="footer__desc_list_el">Unpasteurised drink</li>
+                    <li class="footer__desc_list_el">Probiotics in every drop</li>
+                    <li class="footer__desc_list_el">Healthy choice for every day</li>
+                </ul>
+                <div class="footer__desc_social">
+                    <a href="" class="footer__desc_social_el">
+                        <img src="images/facebook.svg" alt="" class="footer__desc_social_el_icon">
+                    </a>
+                    <a href="" class="footer__desc_social_el">
+                        <img src="images/inst.svg" alt="" class="footer__desc_social_el_icon">
+                    </a>
+                    <a href="" class="footer__desc_social_el">
+                        <img src="images/youtube.svg" alt="" class="footer__desc_social_el_icon">
+                    </a>
+                </div>
+            </div>
+            <div class="footer__content">
+                <div>
+                    <ul class="footer__menu">
+                        <li><a href="catalog.html" class="footer__menu_link">E-Shop</a></li>
+                        <li><a href="partners.html" class="footer__menu_link">Where to Buy</a></li>
+                        <li><a href="blog.html" class="footer__menu_link">Blog</a></li>
+                        <li><a href="about.html" class="footer__menu_link">About Spraga</a></li>
+                        <li><a href="partners.html" class="footer__menu_link">Partners</a></li>
+                    </ul>
+                    <div class="footer__banking">
+                        <img src="images/visa.png" alt="" class="footer__banking_logo">
+                        <img src="images/masterCard.png" alt="" class="footer__banking_logo">
+                        <img src="images/applePay.png" alt="" class="footer__banking_logo">
+                        <img src="images/googlePay.png" alt="" class="footer__banking_logo">
+                    </div>
+                </div>
+                <div class="footer__contacts">
+                    <a href="tel:+420999999999" class="footer__contacts_phone">+420 999 999 999</a>
+                    <a href="mailto:Company@email.com" class="footer__contacts_mail">Company@email.com</a>
+                </div>
+                <div class="footer__subscribe">
+                    <p class="footer__subscribe_title">Newsletter</p>
+                    <p class="footer__subscribe_subtitle">Freshly news every month</p>
+                    <form action="">
+                        <div class="footer__subscribe_form">
+                            <input type="text" name="" placeholder="Enter your email" id="" class="footer__subscribe_form_inp">
+                            <button type="button" class="footer__subscribe_form_btn">
+                                <img src="images/whiteArr.svg" alt="" class="footer__subscribe_form_btn_icon">
+                            </button>
+                        </div>
+                    </form>
+                    <p class="footer__subscribe_info">Don't worry, we hate spam too! You can unsubscribe at any time</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copywrite">2023 - 2024 © Spraga</p>
+                <ul class="footer__bottom_menu">
+                    <li class="footer__bottom_menu_el"><a href="privacy.html" class="footer__bottom_menu_link">Privacy policy</a></li>
+                    <li class="footer__bottom_menu_el"><a href="gdpr.html" class="footer__bottom_menu_link">GDPR</a></li>
+                    <li class="footer__bottom_menu_el"><a href="order.html" class="footer__bottom_menu_link">Shipping and payments</a></li>
+                    <li class="footer__bottom_menu_el"><a href="terms.html" class="footer__bottom_menu_link">Terms and Conditions</a></li>
+                </ul>
+                <p class="footer__creators">Created by <a href="gulian.am">Gulian Digital LLC</a></p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+    <script type="module" src="adaptiveMode/adaptive.js"></script>
+    <script type="module" src="js/catalog.js"></script>
+</body>
+</html>
