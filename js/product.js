@@ -1,9 +1,14 @@
 const productMedia = new Swiper("#productMedia", {
     loop: true,
-    spaceBetween: 40,
+    spaceBetween: 5,
     slidesPerView: 4,
     freeMode: true,
     watchSlidesProgress: true,
+    breakpoints: {
+        520: {
+            spaceBetween: 40,
+        }
+    }
 });
 const productMediaSmall = new Swiper("#productMediaSmall", {
     loop: true,
@@ -16,7 +21,10 @@ const productMediaSmall = new Swiper("#productMediaSmall", {
         swiper: productMedia,
     },
 });
-
+function toggleMobileMenu() {
+    document.querySelector('#mobileMenu').classList.toggle('active');
+}
+window.toggleMobileMenu = toggleMobileMenu;
 const sizes = document.querySelectorAll('.productCart__details_sizes_btn');
 for (let i = 0; i < sizes.length; i++) {
     sizes[i].addEventListener('click', function() {

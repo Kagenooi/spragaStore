@@ -12,3 +12,8 @@ for (let i = 0; i < addressFilterBtns.length; i++) {
     })
 }
 document.querySelector('#defaultAddress').click();
+
+function toggleMobileMenu() {
+    document.querySelector('#mobileMenu').classList.toggle('active');
+}
+window.toggleMobileMenu = toggleMobileMenu;

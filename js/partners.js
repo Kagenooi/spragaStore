@@ -18,7 +18,10 @@ for (let i = 0; i < clearBtns.length; i++) {
         this.classList.remove('active');
     })
 }
-
+function toggleMobileMenu() {
+    document.querySelector('#mobileMenu').classList.toggle('active');
+}
+window.toggleMobileMenu = toggleMobileMenu;
 const phoneCodeBtn = document.querySelector('#openPhoneCode');
 const phoneCodeInp = document.querySelector('#phoneCode');
 phoneCodeBtn.addEventListener('click', function() {

@@ -10,6 +10,18 @@
     padding: 30px 180px 120px;
     max-width: 1920px;
     margin: 0 auto;
+
+    @media (max-width: 1580px) {
+        padding: 30px 80px 120px;
+    }
+
+    @media (max-width: 980px) {
+        padding: 35px 60px 100px;
+    }
+
+    @media (max-width: 580px) {
+        padding: 35px 20px 90px;
+    }
 }
 
 .header {
@@ -17,9 +29,21 @@
     align-items: center;
     gap: 12px;
     width: 100%;
-    padding: 170px 180px 0px;
+    padding: 200px 180px 0px;
     max-width: 1920px;
     margin: 0 auto;
+
+    @media (max-width: 1580px) {
+        padding: 200px 80px 0;
+    }
+
+    @media (max-width: 980px) {
+        padding: 185px 60px 0;
+    }
+
+    @media (max-width: 580px) {
+        padding: 120px 20px 0;
+    }
 
     &__date {
         font-family: "Inter", sans-serif;
@@ -73,14 +97,33 @@
         align-items: center;
         justify-content: space-between;
 
+        @media (max-width: 580px) {
+            flex-direction: column-reverse;
+            align-items: flex-end;
+            gap: 20px;
+        }
+
         &__btns {
             display: flex;
             gap: 40px;
 
+            @media (max-width: 580px) {
+                width: 100%;
+                justify-content: space-between;
+            }
             &_btn {
                 display: flex;
                 align-items: center;
                 gap: 8px;
+                font-family: "Inter", sans-serif;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 24px;
+                color: #080807;
+
+                &_icon {
+                    width: 42px;
+                }
             }
         }
 
@@ -89,8 +132,8 @@
 
             &_drop {
                 position: absolute;
-                top: -3px;
-                right: -210px;
+                top: -50px;
+                right: 0px;
                 max-width: 0;
                 transition: .3s;
                 overflow: hidden;
@@ -156,10 +199,23 @@
         padding: 40px 40px 30px 40px;
         background: linear-gradient(112.15deg, #EDEA41 0%, #46B85B 189.48%);
 
+        @media (max-width: 980px) {
+            padding: 40px 40px 20px;
+        }
+
+        @media (max-width: 580px) {
+            margin: 60px 0;   
+            padding: 40px 20px;    
+        }
+
         &__decor {
             position: absolute;
             right: 35px;
             top: -20px;
+
+            @media (max-width: 980px) {
+                display: none;
+            }
         }
 
         &__info {
@@ -176,6 +232,9 @@
             display: flex;
             gap: 10px;
 
+            @media (max-width: 580px) {
+                flex-direction: column;   
+            }
             &_inp {
                 width: 100%;
                 max-width: 285px;
@@ -209,6 +268,10 @@
                 font-weight: 400;
                 line-height: 21.78px;
 
+                @media (max-width: 580px) {
+                    max-width: 100%;
+                    width: 100%;
+                }
                 &::before {
                     content: '';
                     display: block;
@@ -255,6 +318,10 @@
         font-size: 40px;
         font-weight: 700;
         line-height: 40px;
+
+        @media (max-width: 580px) {
+            font-size: 32px;
+        }
     }
 
     h3 {
@@ -264,6 +331,10 @@
         line-height: 40px;
         letter-spacing: -0.02em;
         color: #231F20;
+
+        @media (max-width: 580px) {
+            font-size: 32px;
+        }
     }
 
     h4 {
@@ -313,6 +384,11 @@
     >img {
         border-radius: 16px;
         width: 100%;
+        object-fit: cover;
+
+        @media (max-width: 980px) {
+            height: 400px;
+        }
     }
 
     .accordion {
@@ -440,6 +516,11 @@
             display: flex;
             justify-content: space-between;
 
+            @media (max-width: 580px) {
+                flex-direction: column;
+                gap: 20px;
+            }
+
             span {
                 font-family: "Montserrat", sans-serif;
                 font-size: 24px;
@@ -475,6 +556,18 @@
                 bottom: 0;
                 left: 0;
             }
+
+            span {
+                font-family: "Inter", sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: -0.02em;
+
+                @media (max-width: 580px) {
+                    font-size: 14px;
+                }
+            }
         }
     }
 }
@@ -485,4 +578,8 @@
     border-radius: 22px;
     width: 320px;
     height: 480px;
+
+    @media (max-width: 980px) {
+        display: none;
+    }
 }

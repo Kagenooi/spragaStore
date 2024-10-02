@@ -8,6 +8,14 @@
     width: 100%;
     padding: 205px 0 120px;
 
+    @media (max-width: 980px) {
+        padding: 185px 0 60px;
+    }
+
+    @media (max-width: 580px) {
+        padding: 120px 0 80px;
+    }
+
     &__wrapper {
         display: flex;
         align-items: flex-start;
@@ -16,12 +24,33 @@
         max-width: 1510px;
         margin: 0 auto;
         padding: 0 15px;
+
+        @media (max-width: 1580px) {
+            padding: 0 30px 0 120px;
+            gap: 90px;
+            max-width: 100%;
+        }
+
+        @media (max-width: 980px) {
+            flex-direction: column;
+            padding: 0 60px;
+            gap: 100px;
+        }
+
+        @media (max-width: 580px) {
+            padding: 0 20px;
+            gap: 40px;
+        }
     }
 
     &__details {
         width: 100%;
         max-width: 790px;
         padding-left: 47px;
+
+        @media (max-width: 580px) {
+            padding-left: 20px;
+        }
 
         &_num {
             position: absolute;
@@ -35,6 +64,12 @@
             text-align: center;
             background: url('../../images/circle.svg') no-repeat center;
             background-size: contain;
+
+            @media (max-width: 580px) {
+                left: -35px;  
+                width: 26px;
+                height: 26px;     
+            }
         }
 
         &_title {
@@ -44,6 +79,11 @@
             font-weight: 700;
             line-height: 40px;
             margin-bottom: 60px;
+
+            @media (max-width: 580px) {
+                margin-left: -20px;
+                font-size: 32px;
+            }
         }
 
         #companyDetails {
@@ -92,6 +132,14 @@
             margin-bottom: 60px;
             position: relative;
 
+            @media (max-width: 980px) {
+                margin: 0;
+            }
+
+            @media (max-width: 580px) {
+                margin-bottom: 60px;       
+            }
+
             &:not(:last-child) {
                 &::before {
                     content: '';
@@ -102,6 +150,12 @@
                     position: absolute;
                     left: -32px;
                     top: 28px;
+
+                    @media (max-width: 580px) {
+                        height: calc(100% - 22px);
+                        top: 23px;
+                        left: -23px;
+                    }
                 }
             }
         }
@@ -127,6 +181,26 @@
                 width: 100%;
                 max-width: 434px;
                 margin-bottom: 20px;
+
+                @media (max-width: 580px) {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    padding: 20px 45px;
+                    gap: 15px;
+                }
+
+                &_txt {
+                    font-family: "Inter", sans-serif;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: -0.02em;
+
+                    @media (max-width: 580px) {
+                        grid-column: 1 / 4;
+                        text-align: center;
+                    }
+                }
             }
 
             &_promo {
@@ -348,6 +422,10 @@
             &_radioImg {
                 max-height: 20px;
                 margin-right: 5px;
+
+                @media (max-width: 580px) {
+                    margin-top: auto; 
+                }
             }
 
             &_radioTxt,
@@ -357,6 +435,11 @@
                 font-weight: 400;
                 line-height: 24px;
                 letter-spacing: -0.02em;
+
+                @media (max-width: 580px) {
+                    font-size: 16px;
+                    line-height: 19px;
+                }
             }
 
             &_radioTxt {
@@ -551,6 +634,10 @@
         max-width: 512px;
         position: relative;
 
+        @media (max-width: 980px) {
+            max-width: 100%;
+        }
+
         &_el {
             padding: 20px 20px 20px 10px;
             position: relative;
@@ -558,6 +645,11 @@
             align-items: center;
             border-bottom: 1.5px solid #E7E7E7;
 
+            @media (max-width: 580px) {
+                align-items: flex-start;
+                padding: 15px;
+                flex-direction: column;       
+            }
             &_clearBtn {
                 position: absolute;
                 top: 20px;
@@ -568,6 +660,10 @@
                 width: 160px;
                 height: 160px;
 
+                @media (max-width: 580px) {
+                    width: 50px;
+                    height: 50px;   
+                }
                 &_img {
                     width: 100%;
                     height: 100%;
@@ -591,6 +687,10 @@
                     font-size: 12px;
                     font-weight: 400;
                     line-height: 18px;
+
+                    @media (max-width: 580px) {
+                        margin-bottom: 4px;
+                    }
                 }
 
                 &_quant {
@@ -649,6 +749,11 @@
                         font-size: 20px;
                         color: #828282;
                         line-height: 24px;
+
+                        @media (max-width: 580px) {
+                            font-size: 16px;
+                            line-height: 19px;
+                        }
                     }
                 }
 
@@ -665,6 +770,11 @@
                         font-weight: 600;
                         line-height: 26px;
                         letter-spacing: 0.4px;
+
+                        @media (max-width: 580px) {
+                            font-size: 18px;
+                            line-height: 18px;
+                        }
                     }
                 }
             }
@@ -688,6 +798,7 @@
             }
 
             &_delivery {
+                margin-bottom: 4px;
 
                 &_key,
                 &_value {
@@ -704,7 +815,7 @@
                     font-size: 16px;
                     font-weight: 700;
                     line-height: 19.36px;
-                    
+
                     &_summ {
                         font-size: 30px;
                         font-weight: 700;

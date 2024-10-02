@@ -10,6 +10,53 @@
 <body>
 
 <div id="adaptive">
+
+    <!-- <form action="">
+        <div class="modal">
+            <div class="modal__wrapper">
+                <h2 class="modal__title">Login</h2>
+                <label for="" class="modal__lab">
+                    <button type="button" class="clearBtn modal__lab_clearBtn">
+                        <img src="images/clear.svg" alt="" class="modal__lab_clearBtn_icon">
+                    </button>
+                    <input type="text" name="" placeholder="Email" id="" class="inp modal__lab_inp">
+                    <span class="modal__lab_tooltip">Please fill this field correctly</span>
+                </label>
+                <label for="" class="modal__lab">
+                    <button type="button" class="clearBtn modal__lab_clearBtn">
+                        <img src="images/clear.svg" alt="" class="modal__lab_clearBtn_icon">
+                    </button>
+                    <input type="password" name="" placeholder="Password" id="" class="inp modal__lab_inp">
+                    <span class="modal__lab_tooltip">Please fill this field correctly</span>
+                </label>
+                <div class="modal__controllers">
+                    <label class="modal__controllers_lab">
+                        <input type="checkbox" name="" class="modal__controllers_lab_inp">
+                        <span class="modal__controllers_lab_checked"></span>
+                        <span class="modal__controllers_lab_txt">Remember me</span>
+                    </label>
+                    <a href="" class="modal__controllers_forgot">Forgot Password?</a>
+                </div>
+                <button type="button" class="modal__submit">Log in</button>
+                <div class="modal__social">
+                    <p class="modal__social_title">or login via</p>
+                    <div class="modal__social_wrapper">
+                        <button type="button" class="modal__social_btn">
+                            <img src="images/Google.png" alt="" class="modal__social_btn_icon">
+                        </button>
+                        <button type="button" class="modal__social_btn">
+                            <img src="images/Facebook.png" alt="" class="modal__social_btn_icon">
+                        </button>
+                        <button type="button" class="modal__social_btn">
+                            <img src="images/Apple.png" alt="" class="modal__social_btn_icon">
+                        </button>
+                    </div>
+                </div>
+                <p class="login__reg"><a href="" class="modal__reg_link"></a></p>
+            </div>
+        </div>
+    </form> -->
+
     <nav class="navbar">
         <div class="navbar__wrapper">
             <div class="navbar__lhand">
@@ -21,7 +68,7 @@
                 </a>
                 <h1 class="navbar__title">Fermented by living culture</h1>
             </div>
-            <div class="navbar__rhand">
+            <div class="navbar__rhand desktop">
                 <ul class="navbar__menu">
                     <li><a href="catalog.html" class="navbar__menu_link">Shop</a></li>
                     <li><a href="" class="navbar__menu_link">Where to buy</a></li>
@@ -54,31 +101,55 @@
                 </div>
             </div>
             <div class="navbar__mobile">
-                <button type="button" class="navbar__wishlist">
-                    <img src="images/wishlistIcon.svg" alt="wishlist" class="navbar__wishlist_icon">
-                    <img src="images/wishlistHover.svg" alt="wishlist" class="navbar__wishlist_icon hover">
-                    <span class="navbar__wishlist_q">0</span>
+                <button type="button" class="navbar__mobile_btn" onclick="toggleMobileMenu()">
+                    <img src="images/menu.svg" alt="" class="navbar__mobile_btn_icon">
                 </button>
-                <button type="button" class="navbar__basket">
-                    <img src="images/basketIcon.svg" alt="basket" class="navbar__basket_icon">
-                    <img src="images/basketHover.svg" alt="basket" class="navbar__basket_icon hover">
-                    <span class="navbar__basket_q">0</span>
-                </button>
-                <div class="navbar__mobile_wrapper">
-                    <button class="navbar__mobile_btn" type="button">
-                        <img src="" alt="menu" class="navbar__mobile_btn_icon">
-                    </button>
-                    <div class="navbar__mobile_container">
-                        <a href="" class="navbar__mobile_logo">
-                            spraga's logo
-                            <img src="images/navMobileLogo.svg" alt="spraga's logo - go to homepage" class="navbar__mobile_logo_img">
-                        </a>
-                        <h2 class="navbar__mobile_title">Fermented by living culture</h2>
-                    </div>
-                </div>
             </div>
         </div>
     </nav>
+
+    <div class="navbar__mobile_wrapper" id="mobileMenu">
+        <div class="navbar__mobile_content">
+            <button type="button" class="navbar__mobile_closeBtn" onclick="toggleMobileMenu()">
+                <img src="images/close.svg" alt="" class="navbar__mobile_closeBtn_icon">
+            </button>
+            <a href="" class="navbar__mobile_logo">
+                <img src="images/navMobileLogo.svg" alt="" class="navbar__mobile_logo_img">
+            </a>
+            <p class="navbar__mobile_title">Fermented by living culture </p>
+            <button type="button" class="navbar__mobile_acc">
+                <img src="images/acc.svg" alt="" class="navbar__mobile_acc_icon">
+                Personal account
+            </button>
+            <ul class="navbar__mobile_menu">
+                <li><a href="" class="navbar__mobile_menu_link">Shop</a></li>
+                <li><a href="" class="navbar__mobile_menu_link">Where to buy</a></li>
+                <li><a href="" class="navbar__mobile_menu_link">Blog</a></li>
+                <li><a href="" class="navbar__mobile_menu_link">About</a></li>
+            </ul>
+            <div class="navbar__mobile_social">
+                <a href="" class="navbar__mobile_social_link phone">8 800 999-99-99</a>
+                <a href="" class="navbar__mobile_social_link mail">Company@email.com</a>
+                <div class="navbar__mobile_social_wrapper">
+                    <a href="" class="navbar__mobile_social_link">
+                        <img src="images/instagram.svg" alt="" class="navbar__mobile_social_link_icon">
+                    </a>
+                    <a href="" class="navbar__mobile_social_link">
+                        <img src="images/facebookB.svg" alt="" class="navbar__mobile_social_link_icon">
+                    </a>
+                    <a href="" class="navbar__mobile_social_link">
+                        <img src="images/youtubeB.svg" alt="" class="navbar__mobile_social_link_icon">
+                    </a>
+                </div>
+            </div>
+            <p class="navbar__mobile_adress">Czech Republic, <br> Bohemia, city, street, <br> house</p>
+            <div class="navbar__mobile_lang">
+                <button type="button" class="navbar__mobile_lang_btn">Czech</button>
+                <button type="button" class="navbar__mobile_lang_btn">English</button>
+                <button type="button" class="navbar__mobile_lang_btn">German</button>
+            </div>
+        </div>
+    </div>
 
     <header class="header">
         <div class="swiper" id="headerSlider">
@@ -235,19 +306,19 @@
             <div class="callActionCat__el">
                 <img src="images/kambucha.jpg" alt="" class="callActionCat__el_bg">
                 <div class="callActionCat__el_wrapper">
+                    <img src="images/kambuchaBg.png" alt="" class="callActionCat__el_decor">
                     <h2 class="callActionCat__el_title">Kombucha</h2>
                     <p class="callActionCat__el_pr">Delight in our unpasteurised, SCOBY-fermented Kombucha, full of life and naturally tasty</p>
                     <a href="blogArticle.html" class="callActionCat__el_link yellow">Try our newbrand flavors</a>
-                    <img src="images/kambuchaBg.png" alt="" class="callActionCat__el_decor">
                 </div>
             </div>
             <div class="callActionCat__el">
                 <img src="images/booster.jpg" alt="" class="callActionCat__el_bg">
                 <div class="callActionCat__el_wrapper">
+                    <img src="images/boostersBg.png" alt="" class="callActionCat__el_decor">
                     <h2 class="callActionCat__el_title green">Natural <br>boosters</h2>
                     <p class="callActionCat__el_pr">Stay focused and revitalised with our unpasteurised, SCOBY-fermented Kombucha, a natural energy booster that fuels mental clarity!</p>
                     <a href="blogArticle.html" class="callActionCat__el_link purple">Coming Soon</a>
-                    <img src="images/boostersBg.png" alt="" class="callActionCat__el_decor">
                 </div>
             </div>
         </div>
@@ -348,8 +419,6 @@
                     </div>
                     <h3 class="blogArticle__title">Lorem ipsum dolor sit amet consectetur</h3>
                 </div>
-            </div>
-            <div class="blog__items">
                 <div class="blogArticle">
                     <div class="blogArticle__pic border">
                         <img src="images/blog3.png" alt="" class="blogArticle__pic_img">

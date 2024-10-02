@@ -13,7 +13,10 @@ for (let i = 0; i < btns.length; i++) {
 
 document.querySelector('#defaultTab').click();
 
-
+function toggleMobileMenu() {
+    document.querySelector('#mobileMenu').classList.toggle('active');
+}
+window.toggleMobileMenu = toggleMobileMenu;
 const inputs = document.querySelectorAll('.inp');
 for (let i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener('input', function () {

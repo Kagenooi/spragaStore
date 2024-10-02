@@ -10,7 +10,10 @@ for (let i = 0; i < inputs.length; i++) {
         }
     })
 }
-
+function toggleMobileMenu() {
+    document.querySelector('#mobileMenu').classList.toggle('active');
+}
+window.toggleMobileMenu = toggleMobileMenu;
 const clearBtns = document.querySelectorAll('.clearBtn');
 for (let i = 0; i < clearBtns.length; i++) {
     clearBtns[i].addEventListener('click', function () {

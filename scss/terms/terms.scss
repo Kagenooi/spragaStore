@@ -1,0 +1,121 @@
+@import '../main';
+@import '../navbar';
+@import '../footer';
+
+
+.terms {
+    padding: 205px 0 185px;
+
+    @media (max-width: 980px) {
+        padding: 120px 0;
+    }
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+        gap: 160px;
+        width: 100%;
+        padding: 0 180px;
+
+        @media (max-width: 1580px) {
+            padding: 0 120px;
+        }
+
+        @media (max-width: 980px) {
+            padding: 0 20px;
+            flex-direction: column;
+            gap: 50px;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        max-width: 1000px;
+
+        @media (max-width: 1580px) {
+            max-width: 768px;
+        }
+    }
+
+    time {
+        font-family: "Inter", sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: -0.02em;
+        color: #231F20;
+    }
+
+    h1 {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 40px;
+
+        @media (max-width: 980px) {
+            font-size: 32px;
+
+            + br {
+                display: none;
+            }
+        }
+    }
+
+    h2 {
+        font-family: "Inter", sans-serif;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 40px;
+        letter-spacing: -0.02em;
+        color: #231F20;
+
+        @media (max-width: 980px) {
+            font-size: 32px;
+
+            + br {
+                display: none;
+            }
+        }
+    }
+
+    p {
+        font-family: "Inter", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+
+        b {
+            font-family: "Inter", sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: -0.02em;
+        }
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+
+    &__menu {
+        margin-top: 70px;
+        display: grid;
+        gap: 22px;
+
+        &_link {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 24px;
+            text-decoration: none !important;
+
+            &.active {
+                color: #E29723;
+            }
+        }
+    }
+}

@@ -11,7 +11,10 @@ for (let i = 0; i < accBtns.length; i++) {
 
     })
 }
-
+function toggleMobileMenu() {
+    document.querySelector('#mobileMenu').classList.toggle('active');
+}
+window.toggleMobileMenu = toggleMobileMenu;
 function subscirbe(modal) {
     let modals = document.querySelectorAll('.modal');
     for (let i = 0; i < modals.length; i++) {

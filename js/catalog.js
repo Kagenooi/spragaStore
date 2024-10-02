@@ -12,3 +12,7 @@ for (let i = 0; i < catalogFilterBtns.length; i++) {
     })
 }
 document.querySelector('#defaultFilter').click();
+function toggleMobileMenu() {
+    document.querySelector('#mobileMenu').classList.toggle('active');
+}
+window.toggleMobileMenu = toggleMobileMenu;

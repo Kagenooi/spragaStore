@@ -5,7 +5,19 @@
 
 
 .products {
-    padding: 200px 0 150px;
+    padding: 170px 0 150px;
+
+    @media (max-width: 1580px) {
+        padding-bottom: 80px;
+    }
+
+    @media (max-width: 1020px) {
+        padding-top: 184px;
+    }
+
+    @media (max-width: 520px) {
+        padding-top: 120px;
+    }
 
     &__title {
         text-align: center;
@@ -20,6 +32,9 @@
         gap: 8px;
         margin: 25px 0 150px;
 
+        @media (max-width: 1020px) {
+            margin-bottom: 100px;
+        }
         &_btn {
             border-radius: 28px;
             border: 1px solid #231F20;
@@ -50,6 +65,28 @@
         &.active {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+
+            @media (max-width: 1020px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (max-width: 520px) {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 1580px) {
+            grid-gap: 150px 20px;
+            padding: 0 80px;
+        }
+
+        @media (max-width: 1020px) {
+            padding: 0 50px;
+            grid-gap: 90px 20px;
+        }
+
+        @media (max-width: 520px) {
+            padding: 0 20px;
         }
     }
 }

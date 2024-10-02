@@ -21,10 +21,10 @@
                 </a>
                 <h1 class="navbar__title">Fermented by living culture</h1>
             </div>
-            <div class="navbar__rhand">
+            <div class="navbar__rhand desktop">
                 <ul class="navbar__menu">
                     <li><a href="catalog.html" class="navbar__menu_link">Shop</a></li>
-                    <li><a href="partners.html" class="navbar__menu_link">Where to buy</a></li>
+                    <li><a href="" class="navbar__menu_link">Where to buy</a></li>
                     <li><a href="blog.html" class="navbar__menu_link">Blog</a></li>
                     <li><a href="about.html" class="navbar__menu_link">About spraga</a></li>
                 </ul>
@@ -54,31 +54,55 @@
                 </div>
             </div>
             <div class="navbar__mobile">
-                <button type="button" class="navbar__wishlist">
-                    <img src="images/wishlistIcon.svg" alt="wishlist" class="navbar__wishlist_icon">
-                    <img src="images/wishlistHover.svg" alt="wishlist" class="navbar__wishlist_icon hover">
-                    <span class="navbar__wishlist_q">0</span>
+                <button type="button" class="navbar__mobile_btn" onclick="toggleMobileMenu()">
+                    <img src="images/menu.svg" alt="" class="navbar__mobile_btn_icon">
                 </button>
-                <button type="button" class="navbar__basket">
-                    <img src="images/basketIcon.svg" alt="basket" class="navbar__basket_icon">
-                    <img src="images/basketHover.svg" alt="basket" class="navbar__basket_icon hover">
-                    <span class="navbar__basket_q">0</span>
-                </button>
-                <div class="navbar__mobile_wrapper">
-                    <button class="navbar__mobile_btn" type="button">
-                        <img src="" alt="menu" class="navbar__mobile_btn_icon">
-                    </button>
-                    <div class="navbar__mobile_container">
-                        <a href="" class="navbar__mobile_logo">
-                            spraga's logo
-                            <img src="images/navMobileLogo.svg" alt="spraga's logo - go to homepage" class="navbar__mobile_logo_img">
-                        </a>
-                        <h2 class="navbar__mobile_title">Fermented by living culture</h2>
-                    </div>
-                </div>
             </div>
         </div>
     </nav>
+
+    <div class="navbar__mobile_wrapper" id="mobileMenu">
+        <div class="navbar__mobile_content">
+            <button type="button" class="navbar__mobile_closeBtn" onclick="toggleMobileMenu()">
+                <img src="images/close.svg" alt="" class="navbar__mobile_closeBtn_icon">
+            </button>
+            <a href="" class="navbar__mobile_logo">
+                <img src="images/navMobileLogo.svg" alt="" class="navbar__mobile_logo_img">
+            </a>
+            <p class="navbar__mobile_title">Fermented by living culture </p>
+            <button type="button" class="navbar__mobile_acc">
+                <img src="images/acc.svg" alt="" class="navbar__mobile_acc_icon">
+                Personal account
+            </button>
+            <ul class="navbar__mobile_menu">
+                <li><a href="" class="navbar__mobile_menu_link">Shop</a></li>
+                <li><a href="" class="navbar__mobile_menu_link">Where to buy</a></li>
+                <li><a href="" class="navbar__mobile_menu_link">Blog</a></li>
+                <li><a href="" class="navbar__mobile_menu_link">About</a></li>
+            </ul>
+            <div class="navbar__mobile_social">
+                <a href="" class="navbar__mobile_social_link phone">8 800 999-99-99</a>
+                <a href="" class="navbar__mobile_social_link mail">Company@email.com</a>
+                <div class="navbar__mobile_social_wrapper">
+                    <a href="" class="navbar__mobile_social_link">
+                        <img src="images/instagram.svg" alt="" class="navbar__mobile_social_link_icon">
+                    </a>
+                    <a href="" class="navbar__mobile_social_link">
+                        <img src="images/facebookB.svg" alt="" class="navbar__mobile_social_link_icon">
+                    </a>
+                    <a href="" class="navbar__mobile_social_link">
+                        <img src="images/youtubeB.svg" alt="" class="navbar__mobile_social_link_icon">
+                    </a>
+                </div>
+            </div>
+            <p class="navbar__mobile_adress">Czech Republic, <br> Bohemia, city, street, <br> house</p>
+            <div class="navbar__mobile_lang">
+                <button type="button" class="navbar__mobile_lang_btn">Czech</button>
+                <button type="button" class="navbar__mobile_lang_btn">English</button>
+                <button type="button" class="navbar__mobile_lang_btn">German</button>
+            </div>
+        </div>
+    </div>
 
     <div class="productCart">
         <div class="productCart__media">
@@ -86,20 +110,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="productCart__media_el">
-                            <div class="product">
-                                <div class="product__wrapper">
-                                    <div class="product__pic">
-                                        <div class="product__animation">
-                                            <img src="images/productAnim1.svg" alt="" class="product__animation_img">
-                                        </div>
-                                        <img src="images/kambucha1.png" alt="" class="product__img">
-                                    </div>
-                                    <img src="images/kambuchaBg1.png" alt="" class="product__bg">
-                                    <div class="product__tooltip green">
-                                        <p class="product__tooltip_pr">Pure Probiotic</p>
-                                    </div>
-                                </div>  
-                            </div>
+                            <img src="images/productCartSlide.png" alt="" class="productCart__media_el_img">
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -119,7 +130,7 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="productCart__media_el">
-                            <video src="images/productCartSlide.png" class="productCart__media_el_video"></video>
+                            <video src="" poster="images/productCartSlide.png" class="productCart__media_el_video"></video>
                         </div>
                     </div>
                 </div>
@@ -134,7 +145,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="productCart__media_elSmall">
-                            <img src="images/productCartSlide2.png" alt="" class="productCart__media_elSmall_img">
+                            <img src="images/productCartSlide.png" alt="" class="productCart__media_elSmall_img">
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -182,10 +193,7 @@
                     <img src="images/packaging.svg" alt="" class="productCart__details_price_quant_img">
                     <span class="productCart__details_price_quant_num">432</span>
                     <span class="productCart__details_price_quant_txt">CZK/box</span>
-                    <p class="productCart__details_price_quant_forOnePice">
-                        <img src="" alt="" class="productCart__details_price_quant_forOnePice_img">
-                        <span class="productCart__details_price_quant_forOnePice_txt" id="boxSizes"></span>
-                    </p>
+                    <p class="productCart__details_price_quant_forOnePice" id="boxSizes"></p>
                 </div>
                 
                 <div class="productCart__details_price_btns">
