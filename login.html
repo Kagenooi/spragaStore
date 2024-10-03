@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="scss/404/notfound.css">
+    <link rel="stylesheet" href="scss/login/login.css">
 </head>
 <body>
     <div id="adaptive">
-
 
         <nav class="navbar">
             <div class="navbar__wrapper">
@@ -413,86 +412,61 @@
             </div>
         </div>
 
-        <div class="notfound">
-            <div class="notfound__wrapper">
-                <h1 class="notfound__title">Hmm, that didn’t work!</h1>
-                <p class="notfound__pr">That page can’t be reached, but if you double-check it,we’re happy to try again.</p>
-                <a href="index.html" class="notfound__link">Back to Homepage</a>
-            </div>
-        </div>
-
-        <footer class="footer">
-            <div class="footer__wrapper">
-                <p class="footer__title">About Spraga</p>
-                <div class="footer__desc">
-                    <ul class="footer__desc_list">
-                        <li class="footer__desc_list_el">Czech quality with a world-class taste</li>
-                        <li class="footer__desc_list_el">Unpasteurised drink</li>
-                        <li class="footer__desc_list_el">Probiotics in every drop</li>
-                        <li class="footer__desc_list_el">Healthy choice for every day</li>
-                    </ul>
-                    <div class="footer__desc_social">
-                        <a href="" class="footer__desc_social_el">
-                            <img src="images/facebook.svg" alt="" class="footer__desc_social_el_icon">
-                        </a>
-                        <a href="" class="footer__desc_social_el">
-                            <img src="images/inst.svg" alt="" class="footer__desc_social_el_icon">
-                        </a>
-                        <a href="" class="footer__desc_social_el">
-                            <img src="images/youtube.svg" alt="" class="footer__desc_social_el_icon">
-                        </a>
+        <form action="">
+            <div class="modal">
+                <div class="modal__wrapper">
+                    <a href="index.html" class="modal__closeBtn">
+                        <img src="images/close.svg" alt="" class="modal__closeBtn_icon">
+                    </a>
+                    <h2 class="modal__title">Login</h2>
+                    <label for="" class="modal__lab">
+                        <button type="button" class="clearBtn modal__lab_clearBtn">
+                            <img src="images/clear.svg" alt="" class="modal__lab_clearBtn_icon">
+                        </button>
+                        <input type="text" name="" placeholder="Email" id="" class="inp modal__lab_inp">
+                        <span class="modal__lab_tooltip">Please fill this field correctly</span>
+                    </label>
+                    <label for="" class="modal__lab">
+                        <button type="button" class="clearBtn modal__lab_clearBtn">
+                            <img src="images/clear.svg" alt="" class="modal__lab_clearBtn_icon">
+                        </button>
+                        <input type="password" name="" placeholder="Password" id="" class="inp modal__lab_inp">
+                        <span class="modal__lab_tooltip">Please fill this field correctly</span>
+                    </label>
+                    <div class="modal__controllers">
+                        <label class="modal__controllers_lab">
+                            <input type="checkbox" name="" class="modal__controllers_lab_inp">
+                            <span class="modal__controllers_lab_checked">
+                                <img src="images/check.svg" alt="" class="modal__controllers_lab_checked_img">
+                            </span>
+                            <span class="modal__controllers_lab_txt">Remember me</span>
+                        </label>
+                        <a href="forgot-password.html" class="modal__controllers_forgot">Forgot Password?</a>
                     </div>
-                </div>
-                <div class="footer__content">
-                    <div>
-                        <ul class="footer__menu">
-                            <li><a href="catalog.html" class="footer__menu_link">E-Shop</a></li>
-                            <li><a href="partners.html" class="footer__menu_link">Where to Buy</a></li>
-                            <li><a href="blog.html" class="footer__menu_link">Blog</a></li>
-                            <li><a href="about.html" class="footer__menu_link">About Spraga</a></li>
-                            <li><a href="partners.html" class="footer__menu_link">Partners</a></li>
-                        </ul>
-                        <div class="footer__banking">
-                            <img src="images/visa.png" alt="" class="footer__banking_logo">
-                            <img src="images/masterCard.png" alt="" class="footer__banking_logo">
-                            <img src="images/applePay.png" alt="" class="footer__banking_logo">
-                            <img src="images/googlePay.png" alt="" class="footer__banking_logo">
+                    <!-- <button type="button" class="modal__submit">Log in</button> -->
+                    <a href="account.html" class="modal__submit">Log in</a>
+                    <div class="modal__social">
+                        <p class="modal__social_title">or login via</p>
+                        <div class="modal__social_wrapper">
+                            <button type="button" class="modal__social_btn">
+                                <img src="images/Google.png" alt="" class="modal__social_btn_icon">
+                            </button>
+                            <button type="button" class="modal__social_btn">
+                                <img src="images/Facebook.png" alt="" class="modal__social_btn_icon">
+                            </button>
+                            <button type="button" class="modal__social_btn">
+                                <img src="images/Apple.png" alt="" class="modal__social_btn_icon">
+                            </button>
                         </div>
                     </div>
-                    <div class="footer__contacts">
-                        <a href="tel:+420999999999" class="footer__contacts_phone">+420 999 999 999</a>
-                        <a href="mailto:Company@email.com" class="footer__contacts_mail">Company@email.com</a>
-                    </div>
-                    <div class="footer__subscribe">
-                        <p class="footer__subscribe_title">Newsletter</p>
-                        <p class="footer__subscribe_subtitle">Freshly news every month</p>
-                        <form action="">
-                            <div class="footer__subscribe_form">
-                                <input type="text" name="" placeholder="Enter your email" id="" class="footer__subscribe_form_inp">
-                                <button type="button" class="footer__subscribe_form_btn">
-                                    <img src="images/whiteArr.svg" alt="" class="footer__subscribe_form_btn_icon">
-                                </button>
-                            </div>
-                        </form>
-                        <p class="footer__subscribe_info">Don't worry, we hate spam too! You can unsubscribe at any time</p>
-                    </div>
-                </div>
-                <div class="footer__bottom">
-                    <p class="footer__copywrite">2023 - 2024 © Spraga</p>
-                    <ul class="footer__bottom_menu">
-                        <li class="footer__bottom_menu_el"><a href="privacy.html" class="footer__bottom_menu_link">Privacy policy</a></li>
-                        <li class="footer__bottom_menu_el"><a href="gdpr.html" class="footer__bottom_menu_link">GDPR</a></li>
-                        <li class="footer__bottom_menu_el"><a href="order.html" class="footer__bottom_menu_link">Shipping and payments</a></li>
-                        <li class="footer__bottom_menu_el"><a href="terms.html" class="footer__bottom_menu_link">Terms and Conditions</a></li>
-                    </ul>
-                    <p class="footer__creators">Created by <a href="Soltreex.com">Soltreex</a></p>
+                    <p class="modal__reg">You don’t have an account? <a href="registration.html" class="modal__reg_link">Sign up <img src="images/next.svg" alt="" class="modal__reg_link_icon"></a></p>
                 </div>
             </div>
-        </footer>
+        </form>
 
     </div>
 
+    <script src="js/login.js"></script>
     <script src="adaptiveMode/adaptive.js"></script>
-    <script src="js/notfound.js"></script>
 </body>
 </html>

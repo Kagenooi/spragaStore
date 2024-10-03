@@ -18,10 +18,7 @@ for (let i = 0; i < clearBtns.length; i++) {
         this.classList.remove('active');
     })
 }
-function toggleMobileMenu() {
-    document.querySelector('#mobileMenu').classList.toggle('active');
-}
-window.toggleMobileMenu = toggleMobileMenu;
+
 const phoneCodeBtn = document.querySelector('#openPhoneCode');
 const phoneCodeInp = document.querySelector('#phoneCode');
 phoneCodeBtn.addEventListener('click', function() {
@@ -34,3 +31,20 @@ phoneCodeBtn.addEventListener('click', function() {
 phoneCodeInp.addEventListener('change', function() {
     this.nextElementSibling.style.maxHeight = this.nextElementSibling.style.maxHeight + this.nextElementSibling.scrollHeight + 'px';
 })
+
+
+function toggleWishlist() {
+    document.querySelector('#favorites').classList.toggle('active');
+}
+window.toggleWishlist = toggleWishlist;
+
+function toggleBasket() {
+    document.querySelector('#basket').classList.toggle('active');
+}
+window.toggleBasket = toggleBasket;
+
+
+function toggleMobileMenu() {
+    document.querySelector('#mobileMenu').classList.toggle('active');
+}
+window.toggleMobileMenu = toggleMobileMenu;

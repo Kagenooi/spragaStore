@@ -1,6 +1,8 @@
 @import '../main';
 @import '../navbar';
 @import '../footer';
+@import '../favorites';
+@import '../basket';
 
 .notfound {
     margin-top: 120px;
@@ -58,8 +60,9 @@
         max-width: 260px;
         border-radius: 30px;
         color: #fff;
-        background: #F0C45E;
+        background: #E29723;
         position: relative;
+        transition: .2s;
 
         &::before {
             content: '';
@@ -71,6 +74,22 @@
             position: absolute;
             top: -2px;
             left: -2px;
+        }
+
+        &:active::before {
+            transition: .2s;
+            top: 0;
+            left: 0;
+        }
+
+        &:hover {
+            background: #F5AB37;
+            transition: .2s;
+        }
+
+        &:active {
+            transition: .2s;
+            background: #D88D19;
         }
     }
 }

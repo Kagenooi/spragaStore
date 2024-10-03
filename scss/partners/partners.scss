@@ -1,6 +1,8 @@
 @import "../main";
 @import "../footer";
 @import "../navbar";
+@import '../favorites';
+@import '../basket';
 
 
 .partnersHeader {
@@ -358,9 +360,19 @@
                 }
             }
             &:active::before {
+                transition: .2s;
                 top: 0;
                 left: 0;
+            }
+    
+            &:hover {
+                background: #FACE68;
                 transition: .2s;
+            }
+    
+            &:active {
+                transition: .2s;
+                background: #DCB04A;
             }
         }
     }

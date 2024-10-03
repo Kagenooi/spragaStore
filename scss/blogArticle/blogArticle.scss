@@ -1,6 +1,8 @@
 @import '../main';
 @import '../footer';
 @import '../navbar';
+@import '../favorites';
+@import '../basket';
 
 
 .wrapper {
@@ -160,7 +162,7 @@
                 line-height: 24px;
                 letter-spacing: -0.02em;
                 text-align: center;
-                background: #DBDBDB;
+                background: #BDBDBD;
                 position: relative;
                 transition: .2s;
 
@@ -176,16 +178,21 @@
                     transition: .2s;
                     border: 1px solid #080807;
                 }
-
+        
                 &:active::before {
                     transition: .2s;
                     top: 0;
                     left: 0;
                 }
-
+        
                 &:hover {
-                    background: #BDBDBD;
+                    background: #DBDBDB;
                     transition: .2s;
+                }
+
+                &:active {
+                    transition: .2s;
+                    background: #A9A9A9;
                 }
             }
         }

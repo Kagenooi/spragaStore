@@ -11,10 +11,7 @@ for (let i = 0; i < accBtns.length; i++) {
 
     })
 }
-function toggleMobileMenu() {
-    document.querySelector('#mobileMenu').classList.toggle('active');
-}
-window.toggleMobileMenu = toggleMobileMenu;
+
 function subscirbe(modal) {
     let modals = document.querySelectorAll('.modal');
     for (let i = 0; i < modals.length; i++) {
@@ -30,3 +27,19 @@ document.querySelector('.articleFooter__share_btn').addEventListener('click', fu
         this.nextElementSibling.style.maxWidth = this.nextElementSibling.style.maxWidth + this.nextElementSibling.scrollWidth + 'px';
     }
 })
+
+function toggleWishlist() {
+    document.querySelector('#favorites').classList.toggle('active');
+}
+window.toggleWishlist = toggleWishlist;
+
+function toggleBasket() {
+    document.querySelector('#basket').classList.toggle('active');
+}
+window.toggleBasket = toggleBasket;
+
+
+function toggleMobileMenu() {
+    document.querySelector('#mobileMenu').classList.toggle('active');
+}
+window.toggleMobileMenu = toggleMobileMenu;

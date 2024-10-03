@@ -21,10 +21,7 @@ const productMediaSmall = new Swiper("#productMediaSmall", {
         swiper: productMedia,
     },
 });
-function toggleMobileMenu() {
-    document.querySelector('#mobileMenu').classList.toggle('active');
-}
-window.toggleMobileMenu = toggleMobileMenu;
+
 const sizes = document.querySelectorAll('.productCart__details_sizes_btn');
 for (let i = 0; i < sizes.length; i++) {
     sizes[i].addEventListener('click', function() {
@@ -36,3 +33,19 @@ for (let i = 0; i < sizes.length; i++) {
     })
 }
 document.querySelector('#sizesDefault').click();
+
+function toggleWishlist() {
+    document.querySelector('#favorites').classList.toggle('active');
+}
+window.toggleWishlist = toggleWishlist;
+
+function toggleBasket() {
+    document.querySelector('#basket').classList.toggle('active');
+}
+window.toggleBasket = toggleBasket;
+
+
+function toggleMobileMenu() {
+    document.querySelector('#mobileMenu').classList.toggle('active');
+}
+window.toggleMobileMenu = toggleMobileMenu;

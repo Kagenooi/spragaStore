@@ -3,6 +3,8 @@
 @import '../navbar';
 @import '../wishlist';
 @import '../productCart';
+@import '../favorites';
+@import '../basket';
 
 .order {
     width: 100%;
@@ -125,6 +127,16 @@
                 transition: .2s;
                 top: 0;
                 left: 0;
+            }
+    
+            &:hover {
+                background: #FACE68;
+                transition: .2s;
+            }
+    
+            &:active {
+                transition: .2s;
+                background: #DCB04A;
             }
         }
 
@@ -268,6 +280,18 @@
                         transition: .2s;
                         top: 0;
                         left: 0;
+                    }
+            
+                    &:hover {
+                        background: #fff;
+                        color: #080807;
+                        transition: .2s;
+                    }
+            
+                    &:active {
+                        transition: .2s;
+                        background: #080807;
+                        color: #fff;
                     }
                 }
             }
@@ -619,9 +643,19 @@
             }
 
             &:active::before {
+                transition: .2s;
                 top: 0;
                 left: 0;
+            }
+    
+            &:hover {
+                background: #FACE68;
                 transition: .2s;
+            }
+    
+            &:active {
+                transition: .2s;
+                background: #DCB04A;
             }
         }
     }

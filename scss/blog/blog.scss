@@ -2,6 +2,8 @@
 @import '../navbar';
 @import '../footer';
 @import '../blogArticle';
+@import '../favorites';
+@import '../basket';
 
 
 .blog {
@@ -118,17 +120,22 @@
                 width: calc(100% - 2px);
                 height: calc(100% - 2px);
                 border-radius: 30px;
-                border: 1px solid #080807;
+                border: 1px solid #000;
                 position: absolute;
-                top: -3px;
-                left: -3px;
-                transition: .2s;
+                top: -2px;
+                left: -2px;
             }
-
+    
             &:active::before {
+                transition: .2s;
                 top: 0;
                 left: 0;
+            }
+    
+            &:hover {
+                background: #fff;
                 transition: .2s;
+                color: #080807;
             }
         }
     }

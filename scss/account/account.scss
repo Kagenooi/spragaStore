@@ -1,6 +1,8 @@
 @import '../main';
 @import '../footer';
 @import '../navbar';
+@import '../favorites';
+@import '../basket';
 
 .tab {
     display: none;
@@ -207,7 +209,7 @@
                 position: relative;
                 color: #fff;
                 padding: 0 25px;
-                background: #E6BA54;
+                background: #E29723;
                 border-radius: 28px;
 
                 @media (max-width: 580px) {
@@ -220,18 +222,27 @@
                     display: block;
                     width: calc(100% - 2px);
                     height: calc(100% - 2px);
+                    border-radius: 30px;
+                    border: 1px solid #000;
                     position: absolute;
                     top: -2px;
-                    left: -4px;
-                    transition: .2s;
-                    border-radius: 28px;
-                    border: 1px solid #000;
+                    left: -2px;
                 }
-
+        
                 &:active::before {
                     transition: .2s;
                     top: 0;
                     left: 0;
+                }
+        
+                &:hover {
+                    background: #F5AB37;
+                    transition: .2s;
+                }
+        
+                &:active {
+                    transition: .2s;
+                    background: #D88D19;
                 }
             }
 
@@ -468,17 +479,22 @@
                 width: calc(100% - 2px);
                 height: calc(100% - 2px);
                 border-radius: 30px;
-                border: 1px solid #080807;
+                border: 1px solid #000;
                 position: absolute;
-                top: -3px;
-                left: -3px;
-                transition: .2s;
+                top: -2px;
+                left: -2px;
             }
-
+    
             &:active::before {
+                transition: .2s;
                 top: 0;
                 left: 0;
+            }
+    
+            &:hover {
+                background: #fff;
                 transition: .2s;
+                color: #080807;
             }
         }
     }
@@ -652,7 +668,7 @@
             margin-top: 42px;
             width: 100%;
             text-align: center;
-            background: #F0C45E;
+            background: #E29723;
             border-radius: 28px;
             font-family: "Montserrat", sans-serif;
             font-size: 20px;
@@ -666,20 +682,29 @@
             &::before {
                 content: '';
                 display: block;
-                position: absolute;
-                top: -6px;
-                left: -12px;
                 width: calc(100% - 2px);
                 height: calc(100% - 2px);
-                border-radius: 28px;
-                border: 1px solid #080807;
-                transition: .2s;
+                border-radius: 30px;
+                border: 1px solid #000;
+                position: absolute;
+                top: -2px;
+                left: -2px;
             }
-
+    
             &:active::before {
+                transition: .2s;
                 top: 0;
                 left: 0;
+            }
+    
+            &:hover {
+                background: #F5AB37;
                 transition: .2s;
+            }
+    
+            &:active {
+                transition: .2s;
+                background: #D88D19;
             }
         }
     }

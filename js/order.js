@@ -10,10 +10,7 @@ for (let i = 0; i < inputs.length; i++) {
         }
     })
 }
-function toggleMobileMenu() {
-    document.querySelector('#mobileMenu').classList.toggle('active');
-}
-window.toggleMobileMenu = toggleMobileMenu;
+
 const clearBtns = document.querySelectorAll('.clearBtn');
 for (let i = 0; i < clearBtns.length; i++) {
     clearBtns[i].addEventListener('click', function () {
@@ -45,3 +42,20 @@ company.addEventListener('click', function () {
         companyDetails.style.maxHeight = companyDetails.style.maxHeight + companyDetails.scrollHeight + 'px';
     }
 })
+
+
+function toggleWishlist() {
+    document.querySelector('#favorites').classList.toggle('active');
+}
+window.toggleWishlist = toggleWishlist;
+
+function toggleBasket() {
+    document.querySelector('#basket').classList.toggle('active');
+}
+window.toggleBasket = toggleBasket;
+
+
+function toggleMobileMenu() {
+    document.querySelector('#mobileMenu').classList.toggle('active');
+}
+window.toggleMobileMenu = toggleMobileMenu;
