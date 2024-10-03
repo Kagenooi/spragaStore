@@ -2269,6 +2269,7 @@ img {
   letter-spacing: -0.01em;
   position: relative;
   border-radius: 28px;
+  transition: 0.2s;
 }
 .blog__link::before {
   content: "";
@@ -2286,6 +2287,16 @@ img {
   top: 0;
   left: 0;
   transition: 0.2s;
+}
+.blog__link:hover {
+  transition: 0.2s;
+  background: #fff;
+  color: #080807;
+}
+.blog__link:active {
+  background: #080807;
+  transition: 0.2s;
+  color: #fff;
 }
 
 .inst {
@@ -2384,6 +2395,16 @@ img {
   top: 0;
   left: 0;
   transition: 0.2s;
+}
+.inst__desc_link:hover {
+  transition: 0.2s;
+  background: #fff;
+  color: #080807;
+}
+.inst__desc_link:active {
+  background: #080807;
+  transition: 0.2s;
+  color: #fff;
 }
 .inst__list {
   width: 100%;

@@ -844,8 +844,8 @@
         }
 
         @media (max-width: 520px) {
-            margin: 0;  
-            min-width: 415px; 
+            margin: 0;
+            min-width: 415px;
             padding-bottom: 45px;
             margin-bottom: 35px;
         }
@@ -862,7 +862,7 @@
         }
 
         @media (max-width: 520px) {
-            left: 40% !important;       
+            left: 40% !important;
         }
     }
 
@@ -954,6 +954,7 @@
         letter-spacing: -0.01em;
         position: relative;
         border-radius: 28px;
+        transition: .2s;
 
         &::before {
             content: '';
@@ -972,6 +973,18 @@
             top: 0;
             left: 0;
             transition: .2s;
+        }
+
+        &:hover {
+            transition: .2s;
+            background: #fff;
+            color: #080807;
+        }
+
+        &:active {
+            background: #080807;
+            transition: .2s;
+            color: #fff;
         }
     }
 }
@@ -1003,7 +1016,7 @@
         @media (max-width: 520px) {
             flex-direction: column;
             padding-left: 20px;
-            grid-gap: 0;       
+            grid-gap: 0;
         }
     }
 
@@ -1078,6 +1091,18 @@
                 left: 0;
                 transition: .2s;
             }
+
+            &:hover {
+                transition: .2s;
+                background: #fff;
+                color: #080807;
+            }
+
+            &:active {
+                background: #080807;
+                transition: .2s;
+                color: #fff;
+            }
         }
     }
 
@@ -1088,14 +1113,16 @@
         max-width: 1250px;
 
         @media (max-width: 520px) {
-            min-width: 700px;       
+            min-width: 700px;
         }
+
         &_slider {
             padding: 120px 0;
 
             @media (max-width: 520px) {
-                padding: 60px 0;   
+                padding: 60px 0;
             }
+
             .swiper-slide {
                 transform: scale(1);
                 transition: .3s;
@@ -1132,8 +1159,9 @@
     padding-top: 50px;
 
     @media (max-width: 520px) {
-        padding-bottom: 80px;           
+        padding-bottom: 80px;
     }
+
     &__wrapper {
         width: 100%;
         max-width: 1430px;
@@ -1150,7 +1178,7 @@
             }
 
             @media (max-width: 520px) {
-                grid-template-columns: repeat(2, 140px);   
+                grid-template-columns: repeat(2, 140px);
                 justify-content: center;
             }
         }
