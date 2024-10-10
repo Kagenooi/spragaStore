@@ -1,18 +1,20 @@
+@import '../blogArticle';
 @import '../main';
 @import '../navbar';
 @import '../footer';
-@import '../blogArticle';
 @import '../favorites';
 @import '../basket';
-
+@import '../productOffers';
+@import '../productCart';
 
 .blog {
     width: 100%;
-    padding: 140px 0px 0px;
+    padding: 220px 0px 0px;
 
     @media (max-width: 580px) {
-        padding-top: 155px;           
+        padding-top: 155px;
     }
+
     &__pagination {
         display: flex;
         align-items: center;
@@ -29,12 +31,51 @@
             gap: 2px;
         }
 
+        &_next,
+        &_prev {
+            width: 52px;
+            height: 52px;
+            position: relative;
+
+            &_icon {
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto;
+                width: 100%;
+                height: 48px;
+                transition: .2s;
+
+                &.hover {
+                    visibility: hidden;
+                    transition: .2s;
+                    opacity: 0;
+                }
+            }
+
+            
+            &:hover &_icon {
+                visibility: hidden;
+                opacity: 0;
+                transition: .2s;
+            }
+
+            &:hover &_icon.hover {
+                visibility: visible;
+                opacity: 1;
+                transition: .2s;
+            }
+        }
+
         &_page {
             position: relative;
             width: 32px;
             height: 32px;
 
-            &:not(.dots) {
+            &:not(.dots).active {
                 background: url('../../images/circle.svg') no-repeat center;
                 background-size: contain;
             }
@@ -74,7 +115,7 @@
 
             @media (max-width: 580px) {
                 padding: 0 20px;
-                margin: 20px auto 40px;   
+                margin: 20px auto 40px;
             }
         }
 
@@ -86,7 +127,7 @@
             @media (max-width: 580px) {
                 width: 120px;
                 top: -30px;
-                right: 15%;   
+                right: 15%;
             }
         }
     }
@@ -112,8 +153,9 @@
             position: relative;
 
             @media (max-width: 580px) {
-                margin-bottom: 30px;   
+                margin-bottom: 30px;
             }
+
             &::before {
                 content: '';
                 display: block;
@@ -125,13 +167,13 @@
                 top: -2px;
                 left: -2px;
             }
-    
+
             &:active::before {
                 transition: .2s;
                 top: 0;
                 left: 0;
             }
-    
+
             &:hover {
                 background: #fff;
                 transition: .2s;
@@ -153,7 +195,7 @@
 
         @media (max-width: 580px) {
             padding: 0 20px;
-            margin-bottom: 60px;       
+            margin-bottom: 60px;
         }
     }
 
@@ -168,8 +210,8 @@
         }
 
         @media (max-width: 580px) {
-            grid-template-columns: 1fr; 
-            gap: 70px;      
+            grid-template-columns: 1fr;
+            gap: 70px;
         }
     }
 
@@ -185,9 +227,9 @@
 
         &__title {
             margin-bottom: 0;
-            
+
             @media (max-width: 580px) {
-                margin: 45px 0 8px;   
+                margin: 45px 0 8px;
             }
         }
     }

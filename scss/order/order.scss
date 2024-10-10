@@ -1,11 +1,16 @@
 @import '../main';
-@import '../footer';
 @import '../navbar';
-@import '../wishlist';
-@import '../productCart';
+@import '../footer';
 @import '../favorites';
 @import '../basket';
+@import '../productOffers';
+@import '../productCart';
 
+
+#adaptive,
+body {
+    overflow: unset;
+}
 .order {
     width: 100%;
     padding: 205px 0 120px;
@@ -666,7 +671,8 @@
         padding: 10px 0;
         width: 100%;
         max-width: 512px;
-        position: relative;
+        position: sticky;
+        top: 100px;
 
         @media (max-width: 980px) {
             max-width: 100%;

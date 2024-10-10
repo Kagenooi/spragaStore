@@ -95,10 +95,35 @@
 
             &_el {
                 width: 22px;
+                position: relative;
 
                 &_icon {
-                    width: 100%;
+                    width: 22px;
                     object-fit: contain;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: .2s;
+                    visibility: visible;
+                    opacity: 1;
+
+                    &.hover {
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: .2s;
+                    }
+                }
+
+                &:hover &_icon {
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: .2s;
+                }
+
+                &:hover &_icon.hover {
+                    visibility: visible;
+                    opacity: 1;
+                    transition: .2s;
                 }
             }
         }
@@ -135,6 +160,12 @@
             font-size: 20px;
             line-height: 28px;
             letter-spacing: -0.03em;
+            transition: .2s;
+
+            &:hover {
+                color: #F0C45E;
+                transition: .2s;
+            }
         }
     }
 
@@ -150,6 +181,7 @@
         &_logo {
             width: 45px;
             object-fit: contain;
+            opacity: .5;
         }
     }
 
@@ -163,12 +195,24 @@
             line-height: 28px;
             letter-spacing: -0.01em;
             margin-bottom: 16px;
+            transition: .2s;
+
+            &:hover {
+                color: #F0C45E;
+                transition: .2s;
+            }
         }
 
         &_mail {
             font-size: 20px;
             line-height: 28px;
             letter-spacing: -0.03em;
+            transition: .2s;
+
+            &:hover {
+                color: #F0C45E;
+                transition: .2s;
+            }
         }
     }
 
@@ -208,7 +252,7 @@
                 font-size: 16px;
                 font-weight: 400;
                 line-height: 24px;
-                color: #BDBDBD;
+                color: #080807;
 
                 &::placeholder {
                     font-family: "Inter", sans-serif;
@@ -260,6 +304,7 @@
         * {
             font-size: 15px;
             line-height: 16px;
+            color: #BDBDBD;
         }
 
         &_menu {
@@ -268,6 +313,15 @@
 
             @media (max-width: 580px) {
                 flex-direction: column;
+            }
+
+            &_link {
+                transition: .2s;
+
+                &:hover {
+                    color: #F0C45E;
+                    transition: .2s;
+                }
             }
 
             &_el {

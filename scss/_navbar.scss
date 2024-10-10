@@ -12,15 +12,26 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 34px 40px 30px 67px;
+        padding: 34px 40px;
         width: 100%;
+        transition: .3s;
 
         @media (max-width: 980px) {
             padding: 40px;
+
+            &.active {
+                padding: 8px 40px;
+                transition: .3s;
+            }
         }
 
         @media (max-width: 580px) {
             padding: 10px 20px;
+        }
+
+        &.active {
+            padding: 8px 40px;
+            transition: .3s;
         }
     }
 
@@ -252,8 +263,8 @@
 
             &_wrapper {
                 position: fixed;
-                top: -100vh;
-                left: 0;
+                top: 0;
+                left: 200vw;
                 z-index: 1099;
                 width: 100vw;
                 height: 100vh;
@@ -264,7 +275,7 @@
                 transition: .3s;
 
                 &.active {
-                    top: 0;
+                    left: 0;
                     transition: .3s;
                 }
 

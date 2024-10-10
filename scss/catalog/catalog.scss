@@ -1,9 +1,10 @@
 @import '../main';
 @import '../navbar';
 @import '../footer';
-@import '../productCart';
 @import '../favorites';
 @import '../basket';
+@import '../productOffers';
+@import '../productCart';
 
 
 .products {
@@ -48,10 +49,13 @@
             letter-spacing: 0.16px;
             text-align: center;
             width: fit-content;
+            transition: .2s;
 
-            &.active {
+            &.active,
+            &:hover {
                 background: #231F20;
                 color: #fff;
+                transition: .2s;
             }
         }
     }
@@ -89,6 +93,17 @@
 
         @media (max-width: 520px) {
             padding: 0 20px;
+        }
+    }
+
+    .product {
+
+        &__bg {
+            top: 40%;
+        }
+
+        &__img {
+            width: 340px;
         }
     }
 }

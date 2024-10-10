@@ -26,7 +26,7 @@
             <div class="navbar__rhand desktop">
                 <ul class="navbar__menu">
                     <li><a href="catalog.html" class="navbar__menu_link">Shop</a></li>
-                    <li><a href="" class="navbar__menu_link">Where to buy</a></li>
+                    <li><a href="partners.html" class="navbar__menu_link">Where to buy</a></li>
                     <li><a href="blog.html" class="navbar__menu_link">Blog</a></li>
                     <li><a href="about.html" class="navbar__menu_link">About spraga</a></li>
                 </ul>
@@ -34,12 +34,12 @@
                     <img src="images/userIcon.svg" alt="my account" class="navbar__account_icon">
                     <img src="images/user-circle.svg" alt="my account" class="navbar__account_icon hover">
                 </a>
-                <button type="button" class="navbar__wishlist" onclick="toggleWishlist()">
+                <button type="button" class="navbar__wishlist" onclick="toggleActive('#favorites')">
                     <img src="images/wishlistIcon.svg" alt="wishlist" class="navbar__wishlist_icon">
                     <img src="images/wishlistHover.svg" alt="wishlist" class="navbar__wishlist_icon hover">
                     <span class="navbar__wishlist_q">0</span>
                 </button>
-                <button type="button" class="navbar__basket" onclick="toggleBasket()">
+                <button type="button" class="navbar__basket" onclick="toggleActive('#basket')">
                     <img src="images/basketIcon.svg" alt="basket" class="navbar__basket_icon">
                     <img src="images/basketHover.svg" alt="basket" class="navbar__basket_icon hover">
                     <span class="navbar__basket_q">0</span>
@@ -56,7 +56,7 @@
                 </div>
             </div>
             <div class="navbar__mobile">
-                <button type="button" class="navbar__mobile_btn" onclick="toggleMobileMenu()">
+                <button type="button" class="navbar__mobile_btn" onclick="toggleActive('#mobileMenu')">
                     <img src="images/menu.svg" alt="" class="navbar__mobile_btn_icon">
                 </button>
             </div>
@@ -65,10 +65,10 @@
 
     <div class="navbar__mobile_wrapper" id="mobileMenu">
         <div class="navbar__mobile_content">
-            <button type="button" class="navbar__mobile_closeBtn" onclick="toggleMobileMenu()">
+            <button type="button" class="navbar__mobile_closeBtn" onclick="toggleActive('#mobileMenu')">
                 <img src="images/close.svg" alt="" class="navbar__mobile_closeBtn_icon">
             </button>
-            <a href="" class="navbar__mobile_logo">
+            <a href="index.html" class="navbar__mobile_logo">
                 <img src="images/navMobileLogo.svg" alt="" class="navbar__mobile_logo_img">
             </a>
             <p class="navbar__mobile_title">Fermented by living culture </p>
@@ -77,10 +77,10 @@
                 Personal account
             </button>
             <ul class="navbar__mobile_menu">
-                <li><a href="" class="navbar__mobile_menu_link">Shop</a></li>
-                <li><a href="" class="navbar__mobile_menu_link">Where to buy</a></li>
-                <li><a href="" class="navbar__mobile_menu_link">Blog</a></li>
-                <li><a href="" class="navbar__mobile_menu_link">About</a></li>
+                <li><a href="catalog.html" class="navbar__mobile_menu_link">Shop</a></li>
+                <li><a href="partners.html" class="navbar__mobile_menu_link">Where to buy</a></li>
+                <li><a href="blog.html" class="navbar__mobile_menu_link">Blog</a></li>
+                <li><a href="about.html" class="navbar__mobile_menu_link">About</a></li>
             </ul>
             <div class="navbar__mobile_social">
                 <a href="" class="navbar__mobile_social_link phone">8 800 999-99-99</a>
@@ -109,216 +109,202 @@
     <div class="favorites" id="favorites">
         <div class="favorites__wrapper">
             <h2 class="favorites__title">Favorites</h2>
-            <button type="button" class="favorites__closeBtn" onclick="toggleWishlist()">
+            <button type="button" class="favorites__closeBtn" onclick="toggleActive('#favorites')">
                 <img src="images/close.svg" alt="" class="favorites__closeBtn_icon">
             </button>
             <div class="favorites__content">
                 <div class="product">
-                    <div class="product__wrapper">
-                        <div class="product__pic">
-                            <div class="product__animation">
-                                <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                    <a href="product-classic.html" class="product__wrapper">
+                        <div class="product__images">
+                            <div class="product__pic">
+                                <picture>
+                                    <source srcset="images/products/productMob1.png" media="(max-width: 980px)">
+                                    <img src="images/products/product1.png" alt="">
+                                </picture>
                             </div>
-                            <img src="images/kambucha3.png" alt="" class="product__img">
+                            <div class="product__animation">
+                                <img src="images/products/productDecor1.svg" width="172px" height="172px" alt="" class="product__animation_img">
+                            </div>
                         </div>
-                        <img src="images/kambuchaBg3.png" alt="" class="product__bg">
-                        <div class="product__tooltip orange">
-                            <p class="product__tooltip_pr">Fresh Fusion</p>
+                        <picture class="product__pic_decor">
+                            <source srcset="images/products/productBgMob1.svg" media="(max-width: 980px)">
+                            <img src="images/products/productBg1.svg" alt="">
+                        </picture>
+                        <div class="product__tooltip" data-bg="#9CC046">
+                            <p class="product__tooltip_pr">Pure Probiotic</p>
                         </div>
-                    </div>  
-                    <h3 class="product__name">Kombucha Classic</h3>
+                    </a>
+                    <h3 class="product__name">Kambucha Classic</h3>
                     <div class="product__price">
-                        <del class="product__price_regular">432 CZK</del>
-                        <p class="product__price_new">432 CZK</p>
+                        <p class="product__price_regular">432 CZK</p>
+                        <p class="product__price_sale">432 CZK</p>
                     </div>
-                    <div class="product__btns">
-                        <button type="button" class="product__btns_addWishlist">
-                            <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
-                            <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    <div class="product__footer">
+                        <button type="button" class="product__footer_addWishlist active">
+                            <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                            <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
                         </button>
-                        <button type="button" class="product__btns_buy">Buy</button>
+                        <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
                     </div>
                 </div>
                 <div class="product">
-                    <div class="product__wrapper">
-                        <div class="product__pic">
-                            <div class="product__animation">
-                                <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                    <a href="product-lingonberry.html" class="product__wrapper">
+                        <div class="product__images">
+                            <div class="product__pic">
+                                <picture>
+                                    <source srcset="images/products/productMob2.png" media="(max-width: 980px)">
+                                    <img src="images/products/product2.png" alt="">
+                                </picture>
                             </div>
-                            <img src="images/kambucha3.png" alt="" class="product__img">
+                            <div class="product__animation">
+                                <img src="images/products/productDecor2.svg" width="172px" height="172px" alt="" class="product__animation_img">
+                            </div>
                         </div>
-                        <img src="images/kambuchaBg3.png" alt="" class="product__bg">
-                        <div class="product__tooltip orange">
-                            <p class="product__tooltip_pr">Fresh Fusion</p>
+                        <picture class="product__pic_decor">
+                            <source srcset="images/products/productBgMob2.svg" media="(max-width: 980px)">
+                            <img src="images/products/productBg2.svg" alt="">
+                        </picture>
+                        <div class="product__tooltip" data-bg="#5E3C98">
+                            <p class="product__tooltip_pr">Berry Bliss</p>
                         </div>
-                    </div>  
-                    <h3 class="product__name">Kombucha Classic</h3>
+                    </a>
+                    <h3 class="product__name">Kambucha Lingonberry</h3>
                     <div class="product__price">
-                        <del class="product__price_regular">432 CZK</del>
-                        <p class="product__price_new">432 CZK</p>
+                        <p class="product__price_regular">432 CZK</p>
+                        <p class="product__price_sale">432 CZK</p>
                     </div>
-                    <div class="product__btns">
-                        <button type="button" class="product__btns_addWishlist">
-                            <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
-                            <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    <div class="product__footer">
+                        <button type="button" class="product__footer_addWishlist active">
+                            <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                            <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
                         </button>
-                        <button type="button" class="product__btns_buy">Buy</button>
+                        <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
                     </div>
                 </div>
                 <div class="product">
-                    <div class="product__wrapper">
-                        <div class="product__pic">
-                            <div class="product__animation">
-                                <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                    <a href="product-mojito.html" class="product__wrapper">
+                        <div class="product__images">
+                            <div class="product__pic">
+                                <picture>
+                                    <source srcset="images/products/productMob3.png" media="(max-width: 980px)">
+                                    <img src="images/products/product3.png" alt="">
+                                </picture>
                             </div>
-                            <img src="images/kambucha3.png" alt="" class="product__img">
+                            <div class="product__animation">
+                                <img src="images/products/productDecor3.svg" width="172px" height="172px" alt="" class="product__animation_img">
+                            </div>
                         </div>
-                        <img src="images/kambuchaBg3.png" alt="" class="product__bg">
-                        <div class="product__tooltip orange">
+                        <picture class="product__pic_decor">
+                            <source srcset="images/products/productBgMob3.svg" media="(max-width: 980px)">
+                            <img src="images/products/productBg3.svg" alt="">
+                        </picture>
+                        <div class="product__tooltip" data-bg="#F37350">
                             <p class="product__tooltip_pr">Fresh Fusion</p>
                         </div>
-                    </div>  
-                    <h3 class="product__name">Kombucha Classic</h3>
+                    </a>
+                    <h3 class="product__name">Kambucha Mojito</h3>
                     <div class="product__price">
-                        <del class="product__price_regular">432 CZK</del>
-                        <p class="product__price_new">432 CZK</p>
+                        <p class="product__price_regular">432 CZK</p>
+                        <p class="product__price_sale">432 CZK</p>
                     </div>
-                    <div class="product__btns">
-                        <button type="button" class="product__btns_addWishlist">
-                            <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
-                            <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    <div class="product__footer">
+                        <button type="button" class="product__footer_addWishlist active">
+                            <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                            <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
                         </button>
-                        <button type="button" class="product__btns_buy">Buy</button>
+                        <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
                     </div>
                 </div>
                 <div class="product">
-                    <div class="product__wrapper">
-                        <div class="product__pic">
-                            <div class="product__animation">
-                                <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                    <a href="product-exotic.html" class="product__wrapper">
+                        <div class="product__images">
+                            <div class="product__pic">
+                                <picture>
+                                    <source srcset="images/products/productMob4.png" media="(max-width: 980px)">
+                                    <img src="images/products/product4.png" alt="">
+                                </picture>
                             </div>
-                            <img src="images/kambucha3.png" alt="" class="product__img">
+                            <div class="product__animation">
+                                <img src="images/products/productDecor4.svg" width="172px" height="172px" alt="" class="product__animation_img">
+                            </div>
                         </div>
-                        <img src="images/kambuchaBg3.png" alt="" class="product__bg">
-                        <div class="product__tooltip orange">
-                            <p class="product__tooltip_pr">Fresh Fusion</p>
+                        <picture class="product__pic_decor">
+                            <source srcset="images/products/productBgMob4.svg" media="(max-width: 980px)">
+                            <img src="images/products/productBg4.svg" alt="">
+                        </picture>
+                        <div class="product__tooltip" data-bg="#DF4235">
+                            <p class="product__tooltip_pr">Tropical Tempt</p>
                         </div>
-                    </div>  
-                    <h3 class="product__name">Kombucha Classic</h3>
+                    </a>
+                    <h3 class="product__name">Kambucha Exotic</h3>
                     <div class="product__price">
-                        <del class="product__price_regular">432 CZK</del>
-                        <p class="product__price_new">432 CZK</p>
+                        <p class="product__price_regular">432 CZK</p>
+                        <p class="product__price_sale">432 CZK</p>
                     </div>
-                    <div class="product__btns">
-                        <button type="button" class="product__btns_addWishlist">
-                            <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
-                            <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    <div class="product__footer">
+                        <button type="button" class="product__footer_addWishlist active">
+                            <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                            <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
                         </button>
-                        <button type="button" class="product__btns_buy">Buy</button>
+                        <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
                     </div>
                 </div>
                 <div class="product">
-                    <div class="product__wrapper">
-                        <div class="product__pic">
-                            <div class="product__animation">
-                                <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                    <a href="product-ginger.html" class="product__wrapper">
+                        <div class="product__images">
+                            <div class="product__pic">
+                                <picture>
+                                    <source srcset="images/products/productMob5.png" media="(max-width: 980px)">
+                                    <img src="images/products/product5.png" alt="">
+                                </picture>
                             </div>
-                            <img src="images/kambucha3.png" alt="" class="product__img">
+                            <div class="product__animation">
+                                <img src="images/products/productDecor5.svg" width="172px" height="172px" alt="" class="product__animation_img">
+                            </div>
                         </div>
-                        <img src="images/kambuchaBg3.png" alt="" class="product__bg">
-                        <div class="product__tooltip orange">
-                            <p class="product__tooltip_pr">Fresh Fusion</p>
+                        <picture class="product__pic_decor">
+                            <source srcset="images/products/productBgMob5.svg" media="(max-width: 980px)">
+                            <img src="images/products/productBg5.svg" alt="">
+                        </picture>
+                        <div class="product__tooltip" data-bg="#9CC046">
+                            <p class="product__tooltip_pr">Spicy Zing</p>
                         </div>
-                    </div>  
-                    <h3 class="product__name">Kombucha Classic</h3>
+                    </a>
+                    <h3 class="product__name">Kambucha Ginger</h3>
                     <div class="product__price">
-                        <del class="product__price_regular">432 CZK</del>
-                        <p class="product__price_new">432 CZK</p>
+                        <p class="product__price_regular">432 CZK</p>
+                        <p class="product__price_sale">432 CZK</p>
                     </div>
-                    <div class="product__btns">
-                        <button type="button" class="product__btns_addWishlist">
-                            <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
-                            <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    <div class="product__footer">
+                        <button type="button" class="product__footer_addWishlist active">
+                            <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                            <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
                         </button>
-                        <button type="button" class="product__btns_buy">Buy</button>
+                        <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
                     </div>
                 </div>
                 <div class="product">
-                    <div class="product__wrapper">
-                        <div class="product__pic">
-                            <div class="product__animation">
-                                <img src="images/productAnim3.svg" alt="" class="product__animation_img">
+                    <a href="product.html" class="product__wrapper">
+                        <div class="product__images">
+                            <div class="product__pic promo">
+                                <picture>
+                                    <source srcset="images/products/productMob6.png" media="(max-width: 980px)">
+                                    <img src="images/products/product6.png" alt="">
+                                </picture>
                             </div>
-                            <img src="images/kambucha3.png" alt="" class="product__img">
                         </div>
-                        <img src="images/kambuchaBg3.png" alt="" class="product__bg">
-                        <div class="product__tooltip orange">
-                            <p class="product__tooltip_pr">Fresh Fusion</p>
-                        </div>
-                    </div>  
-                    <h3 class="product__name">Kombucha Classic</h3>
+                    </a>
+                    <h3 class="product__name">Kambucha Promo box</h3>
                     <div class="product__price">
-                        <del class="product__price_regular">432 CZK</del>
-                        <p class="product__price_new">432 CZK</p>
+                        <p class="product__price_regular">432 CZK</p>
+                        <p class="product__price_sale">432 CZK</p>
                     </div>
-                    <div class="product__btns">
-                        <button type="button" class="product__btns_addWishlist">
-                            <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
-                            <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
+                    <div class="product__footer">
+                        <button type="button" class="product__footer_addWishlist active">
+                            <img src="images/wishlistIcon.svg" alt="" class="product__footer_addWishlist_icon">
+                            <img src="images/wishlistHover.svg" alt="" class="product__footer_addWishlist_icon hover">
                         </button>
-                        <button type="button" class="product__btns_buy">Buy</button>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="product__wrapper">
-                        <div class="product__pic">
-                            <div class="product__animation">
-                                <img src="images/productAnim3.svg" alt="" class="product__animation_img">
-                            </div>
-                            <img src="images/kambucha3.png" alt="" class="product__img">
-                        </div>
-                        <img src="images/kambuchaBg3.png" alt="" class="product__bg">
-                        <div class="product__tooltip orange">
-                            <p class="product__tooltip_pr">Fresh Fusion</p>
-                        </div>
-                    </div>  
-                    <h3 class="product__name">Kombucha Classic</h3>
-                    <div class="product__price">
-                        <del class="product__price_regular">432 CZK</del>
-                        <p class="product__price_new">432 CZK</p>
-                    </div>
-                    <div class="product__btns">
-                        <button type="button" class="product__btns_addWishlist">
-                            <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
-                            <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
-                        </button>
-                        <button type="button" class="product__btns_buy">Buy</button>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="product__wrapper">
-                        <div class="product__pic">
-                            <div class="product__animation">
-                                <img src="images/productAnim3.svg" alt="" class="product__animation_img">
-                            </div>
-                            <img src="images/kambucha3.png" alt="" class="product__img">
-                        </div>
-                        <img src="images/kambuchaBg3.png" alt="" class="product__bg">
-                        <div class="product__tooltip orange">
-                            <p class="product__tooltip_pr">Fresh Fusion</p>
-                        </div>
-                    </div>  
-                    <h3 class="product__name">Kombucha Classic</h3>
-                    <div class="product__price">
-                        <del class="product__price_regular">432 CZK</del>
-                        <p class="product__price_new">432 CZK</p>
-                    </div>
-                    <div class="product__btns">
-                        <button type="button" class="product__btns_addWishlist">
-                            <img src="images/wishlistIcon.svg" alt="" class="product__btns_addWishlist_icon">
-                            <img src="images/wishlistHover.svg" alt="" class="product__btns_addWishlist_icon hover">
-                        </button>
-                        <button type="button" class="product__btns_buy">Buy</button>
+                        <a href="product-classic.html" class="product__footer_buy btn-a">Buy</a>
                     </div>
                 </div>
             </div>
@@ -327,7 +313,7 @@
 
     <div class="basket" id="basket">
         <div class="basket__wrapper">
-            <button type="button" class="basket__closeBtn" onclick="toggleBasket()">
+            <button type="button" class="basket__closeBtn" onclick="toggleActive('#basket')">
                 <img src="images/close.svg" alt="" class="basket__closeBtn_icon">
             </button>
             <h2 class="basket__title">Basket</h2>

@@ -1,8 +1,11 @@
 @import '../main';
-@import '../footer';
 @import '../navbar';
+@import '../footer';
 @import '../favorites';
 @import '../basket';
+@import '../productOffers';
+@import '../productCart';
+
 
 
 .wrapper {
@@ -113,18 +116,65 @@
                 width: 100%;
                 justify-content: space-between;
             }
+
             &_btn {
                 display: flex;
                 align-items: center;
-                gap: 8px;
                 font-family: "Inter", sans-serif;
                 font-size: 13px;
                 font-weight: 400;
                 line-height: 24px;
                 color: #080807;
+                position: relative;
+                transition: .2s;
+
+                &.next {
+                    padding-right: 50px;
+                }
+
+                &.prev {
+                    padding-left: 50px;
+                }
 
                 &_icon {
                     width: 42px;
+                    visibility: visible;
+                    opacity: 1;
+                    transition: .2s;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto 0;
+
+                    &.hover {
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: .2s;
+                    }
+                }
+
+                &.prev img {
+                    left: 0;
+                }
+                &.next img {
+                    right: 0;
+                }
+
+                &:hover {
+                    transition: .2s;
+                    color: #f0c45e;
+                }
+
+                &:hover img {
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: .2s;
+
+                    &.hover {
+                        visibility: visible;
+                        opacity: 1;
+                        transition: .2s;
+                    }
                 }
             }
         }
@@ -142,11 +192,53 @@
 
                 &_wrapper {
                     width: fit-content;
-                    gap: 2px;
+                    gap: 18px;
                     border-radius: 8px;
                     display: flex;
                     background: #E0E0E0;
-                    padding: 4px 6px;
+                    padding: 12px 14px;
+                }
+
+                &_link {
+                    position: relative;
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+
+                    &_icon {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        visibility: visible;
+                        opacity: 1;
+                        transition: .2s;
+
+                        &.hover {
+                            visibility: hidden;
+                            opacity: 0;
+                            transition: .2s;
+                        }
+                    }
+
+                    &:hover img {
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: .2s;
+                    }
+
+                    &:hover img.hover {
+                        visibility: visible;
+                        opacity: 1;
+                        transition: .2s;
+                    }
+
+                    &:active img {
+                        transform: scale(1.3);
+                        transition: .2s;
+                    }
                 }
             }
 
@@ -178,13 +270,13 @@
                     transition: .2s;
                     border: 1px solid #080807;
                 }
-        
+
                 &:active::before {
                     transition: .2s;
                     top: 0;
                     left: 0;
                 }
-        
+
                 &:hover {
                     background: #DBDBDB;
                     transition: .2s;
@@ -211,13 +303,13 @@
         }
 
         @media (max-width: 580px) {
-            margin: 60px 0;   
-            padding: 40px 20px;    
+            margin: 60px 0;
+            padding: 40px 20px;
         }
 
         &__decor {
             position: absolute;
-            right: 35px;
+            left: 0;
             top: -20px;
 
             @media (max-width: 980px) {
@@ -240,14 +332,15 @@
             gap: 10px;
 
             @media (max-width: 580px) {
-                flex-direction: column;   
+                flex-direction: column;
             }
+
             &_inp {
                 width: 100%;
                 max-width: 285px;
                 background: #fff;
                 padding: 8px;
-                border-radius: 8px;
+                border-radius: 4px;
                 font-family: "Inter", sans-serif;
                 font-size: 16px;
                 font-weight: 400;
@@ -274,18 +367,20 @@
                 font-size: 18px;
                 font-weight: 400;
                 line-height: 21.78px;
+                transition: .3s;
 
                 @media (max-width: 580px) {
                     max-width: 100%;
                     width: 100%;
                 }
+
                 &::before {
                     content: '';
                     display: block;
                     width: calc(100% - 2px);
                     height: calc(100% - 2px);
                     position: absolute;
-                    top: -2px;
+                    top: -3px;
                     left: -4px;
                     transition: .3s;
                     border: 1px solid #fff;
@@ -295,6 +390,23 @@
                 &:active::before {
                     top: 0;
                     left: 0;
+                    transition: .3s;
+                }
+
+                &:hover {
+                    transition: .3s;
+                    color: #080807;
+                    background: #fff;
+                }
+
+                &:hover::before {
+                    transition: .3s;
+                    border: 1px solid #080807;
+                }
+
+                &:active {
+                    color: #fff;
+                    background: #080807;
                     transition: .3s;
                 }
             }
@@ -375,7 +487,8 @@
     }
 
     p,
-    strong {
+    strong,
+    blockquote {
         font-family: "Inter", sans-serif;
         font-weight: 400;
         font-size: 18px;
@@ -384,6 +497,21 @@
         text-align: left;
     }
 
+    blockquote {
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 152px;
+            height: 95px;
+            position: absolute;
+            left: 0;
+            top: -50px;
+            background: url('../../images/drivingDecor.svg') no-repeat;
+            z-index: -1;
+        }
+    }
     strong {
         font-weight: 700;
     }
@@ -400,7 +528,7 @@
 
     .accordion {
         &__item {
-            margin-bottom: 5px;
+            margin-bottom: 10px;
 
             &_btn {
                 display: flex;
@@ -464,12 +592,39 @@
                 line-height: 40px;
                 letter-spacing: -0.05em;
                 position: relative;
+                transition: .2s;
 
                 img {
                     position: absolute;
                     top: 8px;
                     right: 0;
                     width: 25px;
+                    visibility: visible;
+                    opacity: 1;
+                    transition: .2s;
+
+                    &.hover {
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: .2s;
+                    }
+                }
+
+                &:hover {
+                    transition: .2s;
+                    color: #f0c45e;
+
+                    img {
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: .2s;
+
+                        &.hover {
+                            visibility: visible;
+                            opacity: 1;
+                            transition: .2s;
+                        }
+                    }
                 }
 
                 &::after {
@@ -480,6 +635,12 @@
                     background: #231F20;
                     position: absolute;
                     bottom: 4px;
+                    transition: .2s;
+                }
+
+                &:hover::after {
+                    background: #f0c45e;
+                    transition: .2s;
                 }
             }
         }
@@ -522,17 +683,37 @@
         p {
             display: flex;
             justify-content: space-between;
+            position: relative;
 
             @media (max-width: 580px) {
                 flex-direction: column;
                 gap: 20px;
             }
 
+            &:not(:last-child) {
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    z-index: 0;
+                    background: url('../../images/dashed.svg');
+                    height: 1.5px;
+                }
+            }
             span {
                 font-family: "Montserrat", sans-serif;
                 font-size: 24px;
                 font-weight: 400;
                 line-height: 40px;
+                display: block;
+                background: #F3F3F3;
+                position: relative;
             }
         }
     }

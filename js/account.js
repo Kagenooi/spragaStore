@@ -8,8 +8,22 @@ for (let i = 0; i < btns.length; i++) {
         }
         this.classList.add('active');
         document.querySelector(`#${this.dataset.tab}`).classList.add('active');
+        if (this.dataset.tab == 'personal') {
+            document.querySelector('#clearData').classList.add('active');
+        } else {
+            document.querySelector('#clearData').classList.remove('active');
+        }
     });
 }
+
+const clearInfo = document.querySelector('#clearData');
+clearInfo.addEventListener('click', function() {
+    let inputs = document.querySelectorAll('.inp');
+    for (let i = 0; i < inputs.length; i++) {
+        inputs[i].value = "";
+        clearBtns[i].classList.remove('active');
+    }
+})
 
 document.querySelector('#defaultTab').click();
 
@@ -47,18 +61,45 @@ phoneCodeInp.addEventListener('change', function() {
     this.nextElementSibling.style.maxHeight = this.nextElementSibling.style.maxHeight + this.nextElementSibling.scrollHeight + 'px';
 })
 
-function toggleWishlist() {
-    document.querySelector('#favorites').classList.toggle('active');
+const navbar = document.querySelector('.navbar__wrapper');
+window.addEventListener('scroll', function () {
+    if (document.body.clientWidth > 580) {
+        if (window.scrollY > 150) {
+            navbar.classList.add('active');
+        } else {
+            navbar.classList.remove('active');
+        }
+    }
+})
+if (document.body.clientWidth > 580) {
+    if (window.scrollY > 150) {
+        navbar.classList.add('active');
+    } else {
+        navbar.classList.remove('active');
+    }
 }
-window.toggleWishlist = toggleWishlist;
-
-function toggleBasket() {
-    document.querySelector('#basket').classList.toggle('active');
-}
-window.toggleBasket = toggleBasket;
 
 
-function toggleMobileMenu() {
-    document.querySelector('#mobileMenu').classList.toggle('active');
-}
-window.toggleMobileMenu = toggleMobileMenu;
+// new
+import {
+    toggleActive,
+    addTooltipBg
+} from "./module.js";
+window.toggleActive = toggleActive;
+window.addTooltipBg = addTooltipBg;
+addTooltipBg();
+
+document.documentElement.addEventListener('click', function(e) {
+    if (e.target.classList.contains('favorites')) {
+        document.querySelector('#favorites').classList.remove('active');
+        document.body.style.overflowY = null;
+    }
+    if (e.target.classList.contains('basket')) {
+        document.querySelector('#basket').classList.remove('active');
+        document.body.style.overflowY = null;
+    }
+    if (e.target.classList.contains('navbar__mobile_wrapper')) {
+        document.querySelector('.navbar__mobile_wrapper').classList.remove('active');
+        document.body.style.overflowY = null;
+    }
+})

@@ -1,10 +1,17 @@
 .blogArticle {
+    display: block;
 
     &__title {
         font-size: 20px;
         font-weight: 600;
         line-height: 24px;
         margin: 20px 0 8px;
+        transition: .2s;
+
+        &:hover {
+            transition: .2s;
+            color: #F0C45E;
+        }
     }
 
     &__pr {
@@ -27,7 +34,7 @@
         font-weight: 400;
         line-height: 24px;
         text-align: left;
-        
+
         &_icon {
             width: 18px;
         }

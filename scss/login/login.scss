@@ -3,6 +3,9 @@
 @import '../footer';
 @import '../favorites';
 @import '../basket';
+@import '../productOffers';
+@import '../productCart';
+
 
 .modal {
     width: 100%;
@@ -286,17 +289,19 @@
         &_link {
             display: flex;
             align-items: center;
-            gap: 5px;
             font-family: "Inter", sans-serif;
             font-size: 18px;
             font-weight: 400;
             line-height: 24px;
             letter-spacing: -0.02em;
             position: relative;
+            padding-right: 30px;
+            transition: .2s;
 
             @media (max-width: 580px) {
                 font-size: 16px;
             }
+
             &::before {
                 content: '';
                 display: block;
@@ -305,11 +310,48 @@
                 background: #080807;
                 position: absolute;
                 bottom: -2px;
+                transition: .2s;
                 left: 0;
             }
 
             &_icon {
                 width: 25px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto 0;
+                visibility: visible;
+                opacity: 1;
+                transition: .2s;
+
+                &.hover {
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: .2s;
+                }
+            }
+
+            &:hover &_icon {
+                visibility: hidden;
+                opacity: 0;
+                transition: .2s;
+            }
+
+            &:hover &_icon.hover {
+                visibility: visible;
+                opacity: 1;
+                transition: .2s;
+            }
+
+            &:hover {
+                color: #FACE68;
+                transition: .2s;
+            }
+
+            &:hover::before {
+                background: #FACE68;
+                transition: .2s;
             }
         }
     }
