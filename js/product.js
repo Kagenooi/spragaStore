@@ -32,7 +32,7 @@ for (let i = 0; i < sizes.length; i++) {
         document.querySelector('#boxSizes').innerHTML = this.dataset.value;
     })
 }
-document.querySelector('#sizesDefault').click();
+// document.querySelector('#sizesDefault').click();
 
 const navbar = document.querySelector('.navbar__wrapper');
 window.addEventListener('scroll', function () {

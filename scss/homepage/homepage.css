@@ -302,10 +302,14 @@ img {
   line-height: 24px;
   letter-spacing: -0.01em;
   transition: 0.2s;
+  border-radius: 16px;
+  display: block;
+  padding: 0 8px;
 }
 .navbar__menu_link:hover {
   transition: 0.2s;
-  color: #F0C45E;
+  color: #fff;
+  background: rgba(35, 31, 32, 0.5019607843);
 }
 .navbar__account, .navbar__wishlist, .navbar__basket {
   display: block;
@@ -1305,7 +1309,7 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 180px;
-  padding: 140px 15px 70px;
+  padding: 70px 15px;
   width: 100%;
   max-width: 1740px;
   margin: 0 auto;
@@ -1313,7 +1317,7 @@ img {
 @media (max-width: 1580px) {
   .productOffers__wrapper,
   .productOffers .wrapper {
-    padding: 140px 80px 70px;
+    padding: 70px 80px;
     grid-gap: 20px;
   }
 }
@@ -1857,8 +1861,11 @@ img {
   top: 50%;
   transform: translate(0, -50%);
   z-index: 1080;
-  width: 52px;
-  height: 52px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 3px;
 }
 .header__slider_btn.next {
   right: 26px;
@@ -1880,13 +1887,26 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 52px;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 48px;
   height: 48px;
   transition: 0.2s;
 }
 .header__slider_btn_icon.hover {
   visibility: hidden;
   opacity: 0;
+  transition: 0.2s;
+}
+.header__slider_btn:hover .header__slider_btn_icon {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+}
+.header__slider_btn:hover .header__slider_btn_icon.hover {
+  visibility: visible;
+  opacity: 1;
   transition: 0.2s;
 }
 .header__slider_el {

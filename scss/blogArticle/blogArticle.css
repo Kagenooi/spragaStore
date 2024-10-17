@@ -247,10 +247,14 @@ img {
   line-height: 24px;
   letter-spacing: -0.01em;
   transition: 0.2s;
+  border-radius: 16px;
+  display: block;
+  padding: 0 8px;
 }
 .navbar__menu_link:hover {
   transition: 0.2s;
-  color: #F0C45E;
+  color: #fff;
+  background: rgba(35, 31, 32, 0.5019607843);
 }
 .navbar__account, .navbar__wishlist, .navbar__basket {
   display: block;
@@ -1250,7 +1254,7 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 180px;
-  padding: 140px 15px 70px;
+  padding: 70px 15px;
   width: 100%;
   max-width: 1740px;
   margin: 0 auto;
@@ -1258,7 +1262,7 @@ img {
 @media (max-width: 1580px) {
   .productOffers__wrapper,
   .productOffers .wrapper {
-    padding: 140px 80px 70px;
+    padding: 70px 80px;
     grid-gap: 20px;
   }
 }

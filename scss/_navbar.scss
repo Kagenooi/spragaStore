@@ -120,10 +120,14 @@
             line-height: 24px;
             letter-spacing: -0.01em;
             transition: .2s;
+            border-radius: 16px;
+            display: block;
+            padding: 0 8px;
 
             &:hover {
                 transition: .2s;
-                color: #F0C45E;
+                color: #fff;
+                background: #231F2080;
             }
         }
     }

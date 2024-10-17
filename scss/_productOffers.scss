@@ -15,13 +15,13 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 180px;
-        padding: 140px 15px 70px;
+        padding: 70px 15px;
         width: 100%;
         max-width: 1740px;
         margin: 0 auto;
 
         @media (max-width: 1580px) {
-            padding: 140px 80px 70px;
+            padding: 70px 80px;
             grid-gap: 20px;
         }
 

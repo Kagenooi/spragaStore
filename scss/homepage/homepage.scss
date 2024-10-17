@@ -44,8 +44,11 @@
             top: 50%;
             transform: translate(0, -50%);
             z-index: 1080;
-            width: 52px;
-            height: 52px;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #00000066;
+            padding: 3px;
 
             &.next {
                 right: 26px;
@@ -67,7 +70,10 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 52px;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                width: 48px;
                 height: 48px;
                 transition: .2s;
 
@@ -78,17 +84,17 @@
                 }
             }
 
-            // &:hover &_icon {
-            //     visibility: hidden;
-            //     opacity: 0;
-            //     transition: .2s;
-            // }
+            &:hover &_icon {
+                visibility: hidden;
+                opacity: 0;
+                transition: .2s;
+            }
 
-            // &:hover &_icon.hover {
-            //     visibility: visible;
-            //     opacity: 1;
-            //     transition: .2s;
-            // }
+            &:hover &_icon.hover {
+                visibility: visible;
+                opacity: 1;
+                transition: .2s;
+            }
         }
 
         &_el {
