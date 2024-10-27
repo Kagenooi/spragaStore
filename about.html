@@ -403,10 +403,11 @@
     <header class="header">
         <div class="header__wrapper">
             <div class="header__video">
-                <video src="" poster="images/blogvideoPoster.jpg" class="header__video_item"></video>
+                <img src="images/blogvideoPoster.jpg" alt="" class="header__video_item">
+                <!-- <video src="" poster="images/blogvideoPoster.jpg" class="header__video_item"></video>
                 <button type="button" class="header__video_play">
                     <img src="images/play.png" alt="" class="header__video_play_icon">
-                </button>
+                </button> -->
             </div>
         </div>
     </header>
@@ -614,21 +615,21 @@
                     <p class="contact__address_info">Spraga Beverages s.r.o.</p>
                     <p class="contact__address_info">Opletalova 1535/4, Praha 1, 110 00, Czech Republic</p>
                     <a href="" class="contact__address_mail">info@spraga.cz</a>
-                    <button type="button" class="contact__address_link" onclick="toggleModal('#getItTouch')">Get in touch</button>
+                    <!-- <button type="button" class="contact__address_link" onclick="toggleModal('#getItTouch')">Get in touch</button> -->
                 </div>
                 <div class="contact__address_wrapper" id="second">
                     <strong class="contact__address_strong">Head office</strong>
                     <p class="contact__address_info">Spraga Beverages s.r.o.</p>
                     <p class="contact__address_info">U Garáží 1611/1, Praha 7, Prague, 170 00, Czech Republic</p>
                     <a href="" class="contact__address_mail">info@spraga.cz</a>
-                    <button type="button" class="contact__address_link" onclick="toggleModal('#getItTouch')">Get in touch</button>
+                    <!-- <button type="button" class="contact__address_link" onclick="toggleModal('#getItTouch')">Get in touch</button> -->
                 </div>
                 <div class="contact__address_wrapper" id="last">
                     <strong class="contact__address_strong">Production and logistics</strong>
                     <p class="contact__address_info">Spraga Beverages s.r.o.</p>
                     <p class="contact__address_info">Průmyslová 1190, Lovosice , 410 02, Czech Republic</p>
                     <a href="" class="contact__address_mail">info@spraga.cz</a>
-                    <button type="button" class="contact__address_link" onclick="toggleModal('#getItTouch')">Get in touch</button>
+                    <!-- <button type="button" class="contact__address_link" onclick="toggleModal('#getItTouch')">Get in touch</button> -->
                 </div>
             </div>
             <div class="contact__bg">
@@ -637,7 +638,16 @@
                 <img src="images/green.png" alt="" class="contact__bg_img">
             </div>
             <div class="contact__map">
-                <img src="images/map.png" alt="" class="contact__map_img">
+                <div class="contact__map_item first">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.123075451207!2d14.4445183!3d50.101033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b956ff0cc8e27%3A0x3d68e29a238c466d!2sSpraga%20Beverages!5e1!3m2!1sen!2scz!4v1729152418451!5m2!1sen!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="contact__map_item second">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2850.3283136023742!2d14.426922276650712!3d50.08076521391295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b949291649457%3A0x940621f4089e57ee!2sOpletalova%201535%2F4%2C%20110%2000%20Nov%C3%A9%20M%C4%9Bsto!5e1!3m2!1scs!2scz!4v1729153300849!5m2!1scs!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="contact__map_item last">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2824.6623764683445!2d14.042267799999998!3d50.5110901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4709810858ef59c5%3A0x71bded548cdf625c!2sSpraga%20Beverages%20Sklad%20-%20Warehouse!5e1!3m2!1sen!2scz!4v1729153690141!5m2!1sen!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <!-- <img src="images/map.png" alt="" class="contact__map_img"> -->
             </div>
         </div>
     </section>
@@ -766,8 +776,8 @@
                     </div>
                 </div>
                 <div class="footer__contacts">
-                    <a href="tel:+420999999999" class="footer__contacts_phone">+420 999 999 999</a>
-                    <a href="mailto:Company@email.com" class="footer__contacts_mail">Company@email.com</a>
+                    <!-- <a href="tel:+420999999999" class="footer__contacts_phone">+420 999 999 999</a> -->
+                    <a href="mailto:Company@email.com" class="footer__contacts_mail">info@spraga.cz</a>
                 </div>
                 <div class="footer__subscribe">
                     <p class="footer__subscribe_title">Newsletter</p>

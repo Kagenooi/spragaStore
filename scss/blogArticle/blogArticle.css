@@ -125,7 +125,7 @@ img {
 
 .navbar {
   width: 100%;
-  background: rgba(255, 255, 255, 0.062745098);
+  background: rgba(255, 255, 255, 0.1450980392);
   position: fixed;
   top: 0;
   left: 0;
@@ -386,7 +386,7 @@ img {
     z-index: 1099;
     width: 100vw;
     height: 100vh;
-    background: rgba(255, 255, 255, 0.062745098);
+    background: rgba(255, 255, 255, 0.1450980392);
     -webkit-backdrop-filter: blur(54px);
             backdrop-filter: blur(54px);
     padding: 40px;
