@@ -11,7 +11,7 @@ for (let i = 0; i < catalogFilterBtns.length; i++) {
         document.querySelector(`#${this.dataset.activate}`).classList.add('active');
     })
 }
-document.querySelector('#defaultFilter').click();
+// document.querySelector('#defaultFilter').click();
 
 
 function toggleWishlist() {

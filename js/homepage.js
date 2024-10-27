@@ -44,6 +44,7 @@ const advantagesSwiper = new Swiper("#advantagesSlider", {
     }
 });
 
+
 const inst = new Swiper("#inst", {
     slidesPerView: 3,
     spaceBetween: 75,
@@ -91,10 +92,10 @@ function setPartnersSlider() {
         partnersWrapper.classList.remove('swiper');
     }
 }
-setPartnersSlider();
-window.addEventListener('resize', function () {
-    setPartnersSlider();
-});
+// setPartnersSlider();
+// window.addEventListener('resize', function () {
+//     setPartnersSlider();
+// });
 
 
 function setSlider() {
@@ -206,7 +207,7 @@ window.toggleActive = toggleActive;
 window.addTooltipBg = addTooltipBg;
 addTooltipBg();
 
-document.documentElement.addEventListener('click', function(e) {
+document.documentElement.addEventListener('click', function (e) {
     if (e.target.classList.contains('favorites')) {
         document.querySelector('#favorites').classList.remove('active');
         document.body.style.overflowY = null;
@@ -220,3 +221,55 @@ document.documentElement.addEventListener('click', function(e) {
         document.body.style.overflowY = null;
     }
 })
+
+
+let advantagesSlides = document.querySelectorAll('.advantages__slider_el');
+let index;
+for (let i = 0; i < advantagesSlides.length; i++) {
+    if (advantagesSlides[i].parentNode.classList.contains('swiper-slide-next')) {
+        index = i + 1;
+    }
+}
+for (let i = 0; i < advantagesSlides.length; i++) {
+    advantagesSlides[i].dataset.index = i - index;
+}
+
+document.querySelector('#next').addEventListener('click', function() {
+    let advantagesSlides = document.querySelectorAll('.advantages__slider_el');
+    index = 0;
+    for (let i = 0; i < advantagesSlides.length; i++) {
+        if (advantagesSlides[i].parentNode.classList.contains('swiper-slide-next')) {
+            index = i + 1;
+        }
+    }
+    for (let i = 0; i < advantagesSlides.length; i++) {
+        advantagesSlides[i].dataset.index = i - index;
+    }
+});
+
+for (let i = 0; i < advantagesSlides.length; i++) {
+    advantagesSlides[i].addEventListener('click', function() {
+        let advantagesSlides = document.querySelectorAll('.advantages__slider_el');
+        index = 0;
+        for (let i = 0; i < advantagesSlides.length; i++) {
+            if (advantagesSlides[i].parentNode.classList.contains('swiper-slide-next')) {
+                index = i + 1;
+            }
+        }
+        for (let i = 0; i < advantagesSlides.length; i++) {
+            advantagesSlides[i].dataset.index = i - index;
+        }
+
+        if (this.dataset.index > 0) {
+            for (let x = 0; x <= this.dataset.index; x++) {
+                document.querySelector('#next').click();
+            }
+        }
+        if (this.dataset.index < 0) {
+            for (let x = 0; x <= Math.abs(this.dataset.index); x++) {
+                document.querySelector('#prev').click();
+            }
+        }
+        
+    })
+}

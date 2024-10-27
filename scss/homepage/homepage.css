@@ -2190,6 +2190,7 @@ img {
   position: relative;
   z-index: 1080;
   padding: 100px;
+  margin-top: 80px;
 }
 @media (max-width: 1580px) {
   .callActionCat__el_wrapper {
@@ -2199,6 +2200,7 @@ img {
 @media (max-width: 980px) {
   .callActionCat__el_wrapper {
     padding: 30px;
+    margin-top: 50px;
   }
 }
 .callActionCat__el:hover .callActionCat__el_bg {

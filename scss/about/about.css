@@ -2424,6 +2424,17 @@ img {
        object-fit: cover;
   }
 }
+.contact__map_item {
+  display: none;
+  height: 670px;
+}
+.contact__map_item iframe {
+  width: 100%;
+  height: 100%;
+}
+.contact__map_item.active {
+  display: block;
+}
 
 .getItTouch {
   position: fixed;

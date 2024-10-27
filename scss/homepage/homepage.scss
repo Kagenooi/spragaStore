@@ -399,6 +399,7 @@
             position: relative;
             z-index: 1080;
             padding: 100px;
+            margin-top: 80px;
 
             @media (max-width: 1580px) {
                 padding: 75px;
@@ -406,6 +407,7 @@
 
             @media (max-width: 980px) {
                 padding: 30px;
+                margin-top: 50px;
             }
         }
 

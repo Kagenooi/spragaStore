@@ -288,10 +288,7 @@
         }
 
         &_subtitle {
-
-            @media (max-width: 580px) {
-                margin-bottom: 8px;
-            }
+            margin-bottom: 5px;
         }
 
         &_pr {
@@ -823,6 +820,7 @@
             line-height: 40px;
             letter-spacing: -0.02em;
             margin-bottom: 16px;
+            max-width: 80%;
         }
 
         &_info {

@@ -2036,10 +2036,8 @@ img {
   font-weight: 700;
   line-height: 24px;
 }
-@media (max-width: 580px) {
-  .productCart__details_subtitle {
-    margin-bottom: 8px;
-  }
+.productCart__details_subtitle {
+  margin-bottom: 5px;
 }
 .productCart__details_pr {
   font-weight: 500;
@@ -2520,6 +2518,7 @@ img {
   line-height: 40px;
   letter-spacing: -0.02em;
   margin-bottom: 16px;
+  max-width: 80%;
 }
 .aboutProduct__desc_info {
   margin-top: 30px;

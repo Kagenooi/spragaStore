@@ -1,10 +1,10 @@
 const address = document.querySelector('#address');
-const addressFilterBtns = address.querySelectorAll('.contact__address_btns_btn');
-const addressWrapper = address.querySelectorAll('.contact__address_wrapper');
-const addressMap = address.querySelector('.contact__bg');
-const addMap = address.querySelectorAll('.contact__map_item');
-const addressMapEl = addressMap.querySelectorAll('.contact__bg_img');
-for (let i = 0; i < addressFilterBtns.length; i++) {
+const addressFilterBtns = address?.querySelectorAll('.contact__address_btns_btn');
+const addressWrapper = address?.querySelectorAll('.contact__address_wrapper');
+const addressMap = address?.querySelector('.contact__bg');
+const addMap = address?.querySelectorAll('.contact__map_item');
+const addressMapEl = addressMap?.querySelectorAll('.contact__bg_img');
+for (let i = 0; i < addressFilterBtns?.length; i++) {
     addressFilterBtns[i].addEventListener('click', function () {
         address.style.background = this.dataset.bg;
         for (let x = 0; x < addressWrapper.length; x++) {
