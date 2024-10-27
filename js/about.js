@@ -2,6 +2,7 @@ const address = document.querySelector('#address');
 const addressFilterBtns = address.querySelectorAll('.contact__address_btns_btn');
 const addressWrapper = address.querySelectorAll('.contact__address_wrapper');
 const addressMap = address.querySelector('.contact__bg');
+const addMap = address.querySelectorAll('.contact__map_item');
 const addressMapEl = addressMap.querySelectorAll('.contact__bg_img');
 for (let i = 0; i < addressFilterBtns.length; i++) {
     addressFilterBtns[i].addEventListener('click', function () {
@@ -9,6 +10,7 @@ for (let i = 0; i < addressFilterBtns.length; i++) {
         for (let x = 0; x < addressWrapper.length; x++) {
             addressWrapper[x].classList.remove('active');
             addressFilterBtns[x].classList.remove('active');
+            addMap[x].classList.remove('active');
         }
         for (let x = 0; x < addressMapEl.length; x++) {
             addressMapEl[x].style.display = 'none';
@@ -16,6 +18,7 @@ for (let i = 0; i < addressFilterBtns.length; i++) {
         addressMapEl[this.dataset.index].style.display = 'block';
         this.classList.add('active');
         document.querySelector(`#${this.dataset.activate}`).classList.add('active');
+        document.querySelector(`.${this.dataset.activate}`).classList.add('active');
     })
 }
 document.querySelector('#defaultAddress').click();
